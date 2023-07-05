@@ -10,6 +10,7 @@ $customer-colors: (
         "cate-bg-third": #efefef
 );
 
+
 @use "../010-settings/" as * with (
     $il-main-color: map-get($customer-colors, "cate-color-1"),
     $il-headings-color: map-get($customer-colors, "cate-color-1"),

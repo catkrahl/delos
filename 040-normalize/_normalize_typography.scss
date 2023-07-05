@@ -1,83 +1,52 @@
 @use "../010-settings/" as *;
 
+// Nunito
 @font-face {
-	font-family: 'Open Sans';
-	src:	url('#{$il-web-font-path}OpenSansWeb/OpenSans-Regular.woff2') format('woff2'),
-			url('#{$il-web-font-path}OpenSansWeb/OpenSans-Regular.woff') format('woff');
-	font-weight: 400;
+	font-family: 'Nunito';
+	src:	url('#{$il-web-font-path}cate/nunito-sans-v6-latin-200.woff') format('woff');
+	src:	url('#{$il-web-font-path}cate/nunito-sans-v6-latin-200.woff2') format('woff2');
+	font-weight: 200;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Open Sans';
-	src:	url('#{$il-web-font-path}OpenSansWeb/OpenSans-Bold.woff2') format('woff2'),
-			url('#{$il-web-font-path}OpenSansWeb/OpenSans-Bold.woff') format('woff');
-	font-weight: 700;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Open Sans';
-	src:	url('#{$il-web-font-path}OpenSansWeb/OpenSans-Italic.woff2') format('woff2'),
-			url('#{$il-web-font-path}OpenSansWeb/OpenSans-Italic.woff') format('woff');
-	font-weight: 400;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'Open Sans';
-	src:	url('#{$il-web-font-path}OpenSansWeb/OpenSans-BoldItalic.woff2') format('woff2'),
-			url('#{$il-web-font-path}OpenSansWeb/OpenSans-BoldItalic.woff') format('woff');
-	font-weight: 700;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'Open Sans';
-	src:	url('#{$il-web-font-path}OpenSansWeb/OpenSans-Light.woff2') format('woff2'),
-			url('#{$il-web-font-path}OpenSansWeb/OpenSans-Light.woff') format('woff');
+	font-family: 'Nunito';
+	src:	url('#{$il-web-font-path}cate/nunito-sans-v6-latin-300.woff') format('woff');
+	src:	url('#{$il-web-font-path}cate/nunito-sans-v6-latin-300.woff2') format('woff2');
 	font-weight: 300;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Open Sans';
-	src:	url('#{$il-web-font-path}OpenSansWeb/OpenSans-LightItalic.woff2') format('woff2'),
-			url('#{$il-web-font-path}OpenSansWeb/OpenSans-LightItalic.woff') format('woff');
-	font-weight: 300;
-	font-style: italic;
+	font-family: 'Nunito';
+	src:	url('#{$il-web-font-path}cate/nunito-sans-v6-latin-regular.woff') format('woff');
+	src:	url('#{$il-web-font-path}cate/nunito-sans-v6-latin-regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Open Sans';
-	src:	url('#{$il-web-font-path}OpenSansWeb/OpenSans-Semibold.woff2') format('woff2'),
-			url('#{$il-web-font-path}OpenSansWeb/OpenSans-Semibold.woff') format('woff');
+	font-family: 'Nunito';
+	src:	url('#{$il-web-font-path}cate/nunito-sans-v6-latin-600.woff') format('woff');
+	src:	url('#{$il-web-font-path}cate/nunito-sans-v6-latin-600.woff2') format('woff2');
 	font-weight: 600;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Open Sans';
-	src:	url('#{$il-web-font-path}OpenSansWeb/OpenSans-SemiboldItalic.woff2') format('woff2'),
-			url('#{$il-web-font-path}OpenSansWeb/OpenSans-SemiboldItalic.woff') format('woff');
-	font-weight: 600;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'Open Sans';
-	src:	url('#{$il-web-font-path}OpenSansWeb/OpenSans-ExtraBold.woff2') format('woff2'),
-			url('#{$il-web-font-path}OpenSansWeb/OpenSans-ExtraBold.woff') format('woff');
-	font-weight: 800;
+	font-family: 'Nunito';
+	src:	url('#{$il-web-font-path}cate/nunito-sans-v6-latin-700.woff') format('woff');
+	src:	url('#{$il-web-font-path}cate/nunito-sans-v6-latin-700.woff2') format('woff2');
+	font-weight: 700;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Open Sans';
-	src:	url('#{$il-web-font-path}OpenSansWeb/OpenSans-ExtraBoldItalic.woff2') format('woff2'),
-			url('#{$il-web-font-path}OpenSansWeb/OpenSans-ExtraBoldItalic.woff') format('woff');
-	font-weight: 800;
-	font-style: italic;
+	font-family: 'Nunito';
+	src:	url('#{$il-web-font-path}cate/nunito-sans-v6-latin-900.woff') format('woff');
+	src:	url('#{$il-web-font-path}cate/nunito-sans-v6-latin-900.woff2') format('woff2');
+	font-weight: 900;
+	font-style: normal;
 }
 
 // currently from https://github.com/MorbZ/OpenSansEmoji

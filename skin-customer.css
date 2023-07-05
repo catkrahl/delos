@@ -1,5 +1,10 @@
 @charset "UTF-8";
 /*
+@use "./010-settings/legacy-settings/legacy-settings_panel" as * with (
+    $il-panel-heading-padding: $il-padding-xlarge-vertical $il-padding-xlarge-horizontal 0 $il-padding-xlarge-horizontal 
+);
+*/
+/*
 * Dependencies
 */
 /*!
@@ -85,7 +90,7 @@
 }
 .bootstrap-datetimepicker-widget .timepicker-hour, .bootstrap-datetimepicker-widget .timepicker-minute, .bootstrap-datetimepicker-widget .timepicker-second {
   width: 54px;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1rem;
   margin: 0;
 }
@@ -502,7 +507,7 @@
 
 .dropdown-menu {
   background-color: #f9f9f9;
-  font-weight: 400;
+  font-weight: 300;
   border: 0 none;
   -webkit-box-shadow: 3px 9px 9px 0 rgba(0, 0, 0, 0.3);
   box-shadow: 3px 9px 9px 0 rgba(0, 0, 0, 0.3);
@@ -520,7 +525,7 @@
   clear: both;
   border: none;
   padding: 3px 15px;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.428571429;
   background-color: transparent;
@@ -612,7 +617,7 @@
   float: left;
   clear: left;
   width: 100%;
-  font-weight: 600;
+  font-weight: 400;
 }
 .ui-menu .ui-menu-more {
   display: block;
@@ -803,54 +808,54 @@ table.mceToolbar tbody, table.mceToolbar tr, table.mceToolbar td {
 }
 @font-face {
   font-family: "Nunito";
-  src: url("../fonts/cate/nunito-sans-v6-latin-200.woff") format("woff");
-  src: url("../fonts/cate/nunito-sans-v6-latin-200.woff2") format("woff2");
+  src: url("./fonts/cate/nunito-sans-v6-latin-200.woff") format("woff");
+  src: url("./fonts/cate/nunito-sans-v6-latin-200.woff2") format("woff2");
   font-weight: 200;
   font-style: normal;
 }
 @font-face {
   font-family: "Nunito";
-  src: url("../fonts/cate/nunito-sans-v6-latin-300.woff") format("woff");
-  src: url("../fonts/cate/nunito-sans-v6-latin-300.woff2") format("woff2");
+  src: url("./fonts/cate/nunito-sans-v6-latin-300.woff") format("woff");
+  src: url("./fonts/cate/nunito-sans-v6-latin-300.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "Nunito";
-  src: url("../fonts/cate/nunito-sans-v6-latin-regular.woff") format("woff");
-  src: url("../fonts/cate/nunito-sans-v6-latin-regular.woff2") format("woff2");
+  src: url("./fonts/cate/nunito-sans-v6-latin-regular.woff") format("woff");
+  src: url("./fonts/cate/nunito-sans-v6-latin-regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Nunito";
-  src: url("../fonts/cate/nunito-sans-v6-latin-600.woff") format("woff");
-  src: url("../fonts/cate/nunito-sans-v6-latin-600.woff2") format("woff2");
+  src: url("./fonts/cate/nunito-sans-v6-latin-600.woff") format("woff");
+  src: url("./fonts/cate/nunito-sans-v6-latin-600.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "Nunito";
-  src: url("../fonts/cate/nunito-sans-v6-latin-700.woff") format("woff");
-  src: url("../fonts/cate/nunito-sans-v6-latin-700.woff2") format("woff2");
+  src: url("./fonts/cate/nunito-sans-v6-latin-700.woff") format("woff");
+  src: url("./fonts/cate/nunito-sans-v6-latin-700.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Nunito";
-  src: url("../fonts/cate/nunito-sans-v6-latin-900.woff") format("woff");
-  src: url("../fonts/cate/nunito-sans-v6-latin-900.woff2") format("woff2");
+  src: url("./fonts/cate/nunito-sans-v6-latin-900.woff") format("woff");
+  src: url("./fonts/cate/nunito-sans-v6-latin-900.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: "Open Sans Emoji";
-  src: url("../fonts/OpenSansEmoji/OpenSansEmoji.ttf") format("truetype"), url("../fonts/OpenSansEmoji/OpenSansEmoji.otf") format("otf");
+  src: url("./fonts/OpenSansEmoji/OpenSansEmoji.ttf") format("truetype"), url("./fonts/OpenSansEmoji/OpenSansEmoji.otf") format("otf");
   font-style: normal;
 }
 @font-face {
   font-family: "il-icons";
-  src: url("../fonts/Iconfont/il-icons.woff") format("woff"), url("../fonts/Iconfont/il-icons.ttf") format("truetype");
+  src: url("./fonts/Iconfont/il-icons.woff") format("woff"), url("./fonts/Iconfont/il-icons.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
@@ -2005,7 +2010,7 @@ html {
 }
 
 body {
-  font-family: "Nunito", Verdana, Arial, Helvetica, sans-serif;
+  font-family: Nunito;
   font-size: 0.875rem;
   line-height: 1.428571429;
   color: #161616;
@@ -2100,8 +2105,8 @@ tr, td {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "Nunito", Verdana, Arial, Helvetica, sans-serif;
-  font-weight: 500;
+  font-family: Nunito;
+  font-weight: 300;
   line-height: 1.33;
   color: #c0069b;
 }
@@ -2320,7 +2325,7 @@ sub, sup {
 }
 
 strong, b {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 code {
@@ -2432,7 +2437,7 @@ code {
   direction: rtl;
   text-align: left;
   margin: 0;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 0.75rem;
   padding: 6px;
   padding-left: 20px;
@@ -2510,11 +2515,11 @@ ol.breadcrumb > li + li:before {
   cursor: pointer;
   user-select: none;
   touch-action: manipulation;
-  font-family: "Nunito", Verdana, Arial, Helvetica, sans-serif;
+  font-family: Nunito;
   text-align: center;
   line-height: inherit;
   font-size: inherit;
-  font-weight: 400;
+  font-weight: 300;
   text-decoration: none;
   min-height: 28px;
   min-width: 28px;
@@ -2684,11 +2689,11 @@ input.btn, input.il-link.link-bulky,
   cursor: pointer;
   user-select: none;
   touch-action: manipulation;
-  font-family: "Nunito", Verdana, Arial, Helvetica, sans-serif;
+  font-family: Nunito;
   text-align: center;
   line-height: inherit;
   font-size: inherit;
-  font-weight: 400;
+  font-weight: 300;
   text-decoration: none;
   min-height: 2.2rem;
   min-width: 2.2rem;
@@ -3121,7 +3126,7 @@ input.btn, input.il-link.link-bulky,
   white-space: normal;
   vertical-align: baseline;
   font-size: inherit;
-  font-weight: 400;
+  font-weight: 300;
   color: #c0069b;
   border: 0;
   min-height: 0;
@@ -3281,7 +3286,7 @@ button > .glyphicon {
 
 .minimize, .close {
   font-size: 1.3125rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1;
   color: #737373;
   background-color: transparent;
@@ -3414,7 +3419,7 @@ button .minimize, button .close {
   position: absolute;
   top: 3px;
   left: 9px;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 0.75rem;
   color: #f9f9f9;
 }
@@ -3431,7 +3436,7 @@ button .minimize, button .close {
   position: absolute;
   top: 3px;
   left: 24px;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 0.75rem;
 }
 .il-toggle-button.off .il-toggle-switch {
@@ -3523,7 +3528,7 @@ button .minimize, button .close {
   margin: 6px 0 0 0;
 }
 .il-card .caption dl dt {
-  font-weight: 400;
+  font-weight: 300;
   color: rgb(111.25, 111.25, 111.25);
   padding-top: 6px;
 }
@@ -3680,7 +3685,7 @@ button .minimize, button .close {
 }
 .il-chart-progressmeter-box .il-chart-progressmeter-container .il-chart-progressmeter-viewbox .il-chart-progressmeter-text .text-score {
   font-size: 0.625rem;
-  font-weight: 600;
+  font-weight: 400;
   fill: #000000;
 }
 .il-chart-progressmeter-box .il-chart-progressmeter-container .il-chart-progressmeter-viewbox .il-chart-progressmeter-text .text-comparision {
@@ -3927,7 +3932,7 @@ hr.il-divider-with-label {
 }
 .c-entity.__primary-identifier {
   grid-area: prim-id;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1.5rem;
 }
 .c-entity.__featured {
@@ -3979,7 +3984,7 @@ hr.il-divider-with-label {
   box-shadow: none;
   outline: none;
   line-height: 1.428571429;
-  font-weight: 600 !important;
+  font-weight: 400 !important;
 }
 .il-input-tag-container .il-input-tag .tagify__tag {
   margin-top: 0;
@@ -4337,7 +4342,7 @@ hr.il-divider-with-label {
 }
 .il-standard-form .il-standard-form-header h2, .il-standard-form .il-section-input-header h2 {
   font-size: 1.115rem;
-  font-weight: 600;
+  font-weight: 400;
   padding-top: 12px;
   padding-bottom: 3px;
 }
@@ -4370,7 +4375,7 @@ hr.il-divider-with-label {
 .input-group-addon {
   padding: 3px 8px;
   font-size: 0.875rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1;
   color: #161616;
   text-align: center;
@@ -4484,7 +4489,7 @@ td.form-inline > div.form-group {
   float: left;
   color: #161616;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 300;
   padding: 9px 15px;
   margin: 0;
 }
@@ -4751,7 +4756,7 @@ div.il-system-infos {
 
 .header-inner {
   align-items: center;
-  background: #c0069b;
+  background: #ffffff;
   display: flex;
   flex-direction: row;
   height: 60px;
@@ -4773,7 +4778,7 @@ div.il-system-infos {
 }
 
 .il-pagetitle {
-  font-weight: 600;
+  font-weight: 400;
   display: flex;
   font-size: 1rem;
   align-items: center;
@@ -4995,8 +5000,8 @@ footer {
   .il-header-locator .open > .dropdown-toggle.btn-default:hover .open > .dropdown-toggle.btn-default:active,
   .il-header-locator .open > .dropdown-toggle.btn-default:active:hover,
   .il-header-locator .open > .dropdown-toggle.btn-default:active:focus {
-    background: #c0069b;
-    border-color: #c0069b;
+    background: #ffffff;
+    border-color: #ffffff;
     color: #2c2c2c;
     outline: none;
   }
@@ -5213,7 +5218,7 @@ footer {
   background-color: #ffffff;
   color: #161616;
   font-size: 1.115rem;
-  font-weight: 400;
+  font-weight: 300;
   margin-bottom: 6px;
   margin-top: 0;
   padding: 6px 12px;
@@ -5300,7 +5305,7 @@ footer {
 .il-workflow-container .active .text .il-workflow-step-label .btn.btn-link {
   color: #c0069b;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 .il-workflow-container .text {
   border-left: 1px dashed #2c2c2c;
@@ -5315,7 +5320,7 @@ footer {
 .il-workflow-container .available .il-workflow-step-label .btn.btn-link {
   color: #161616;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 300;
   margin-top: -3px;
 }
 
@@ -5336,7 +5341,7 @@ footer {
   color: #161616;
   font-size: 1.115rem;
   line-height: 1.33;
-  font-weight: 600;
+  font-weight: 400;
 }
 #il_right_col .il-workflow .il-workflow-container {
   padding: 15px 15px;
@@ -6442,7 +6447,7 @@ footer {
 }
 .il-system-info div.il-system-info-content-wrapper span.il-system-info-headline {
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 400;
   margin-right: 9px;
 }
 .il-system-info p:first-child {
@@ -6811,7 +6816,7 @@ div.alert ul > li:before {
   color: #161616;
   font-size: 1.115rem;
   line-height: 1.33;
-  font-weight: 600;
+  font-weight: 400;
 }
 .panel .panel-heading.ilHeader h4, .panel .panel-heading.ilHeader h4.ilBlockHeader,
 .panel .panel-heading.ilBlockHeader h4,
@@ -6904,7 +6909,7 @@ div.alert ul > li:before {
 }
 
 .panel-primary h2.ilHeader {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .panel-secondary {
@@ -6979,7 +6984,7 @@ div.alert ul > li:before {
 .il-panel-listing-std-container > h2 {
   color: #161616;
   font-size: 1.115rem;
-  font-weight: 600;
+  font-weight: 400;
   float: left;
   padding: 9px 15px;
   margin: 0;
@@ -7323,7 +7328,7 @@ div.alert ul > li:before {
 }
 .il-popover .il-popover-title-container h4.il-popover-title {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 300;
   padding: 8px 14px;
   background-color: transparent;
   text-transform: none;
@@ -8852,7 +8857,7 @@ div.alert ul > li:before {
 }
 .il-table-presentation-row .il-table-presentation-row-header h4 {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 300;
   padding: 0;
   margin: 0;
   cursor: pointer;
@@ -9381,7 +9386,7 @@ div#agreement {
   color: inherit;
 }
 .alert .alert-link {
-  font-weight: 400;
+  font-weight: 300;
 }
 .alert > p,
 .alert > ul {
@@ -9519,7 +9524,7 @@ h1.il-page-content-header {
   color: #2c2c2c;
   vertical-align: middle;
   font-size: 1.75rem;
-  font-weight: 600;
+  font-weight: 400;
 }
 @media only screen and (max-width: 991px) {
   h1.il-page-content-header {
@@ -9542,7 +9547,7 @@ h1.ilHeader {
 }
 
 h2.ilHeader {
-  font-weight: 600;
+  font-weight: 400;
   padding: 0;
   margin: 0;
   display: inline;
@@ -9682,7 +9687,7 @@ div.ilSideBarContent {
 /* ------- Helptext --------- */
 span.il_Helptext {
   font-size: 0.75rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 /* Icon Default */
@@ -9881,7 +9886,7 @@ tr.std {
 th {
   text-align: left;
   vertical-align: bottom;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 td.std, th.std {
@@ -9897,7 +9902,7 @@ th.option, td.option {
   background-color: #f9f9f9;
   color: #161616;
   padding: 3px;
-  font-weight: 600;
+  font-weight: 400;
   vertical-align: top;
   text-align: right;
   border-top: 1px solid #9eadba;
@@ -9907,7 +9912,7 @@ td.sub_option {
   background-color: white;
   color: #161616;
   padding: 3px;
-  font-weight: 600;
+  font-weight: 400;
   vertical-align: top;
   border-top: 1px solid #9eadba;
 }
@@ -9935,7 +9940,7 @@ td.option_desc, p.option_desc {
   color: #161616;
   padding: 3px;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 300;
   vertical-align: top;
   text-align: left;
 }
@@ -9951,7 +9956,7 @@ a.il_ContainerItemCommand:link, a.il_ContainerItemCommand:visited {
   text-decoration: none;
   margin: 0 3px 0 0;
   white-space: nowrap;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 a.il_ContainerItemCommand2:hover,
@@ -9971,7 +9976,7 @@ div.il_ContainerItemCommands {
 h3.il_ContainerItemTitle {
   padding: 0;
   margin: 0;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 0.875rem;
   display: inline;
 }
@@ -9985,21 +9990,21 @@ div.il_ContainerItemTitle {
 div.il_ItemProperties {
   margin: 2px 0 5px;
   text-align: left;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 0.75rem;
 }
 
 div.il_ItemNotice {
   margin: 2px 0 5px;
   text-align: left;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 0.75rem;
   color: green;
 }
 
 a.il_ItemProperty:link, a.il_ItemProperty:visited {
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 a.il_ItemProperty:hover {
@@ -10012,7 +10017,7 @@ a.il_ItemProperty:hover {
 div.il_Description, td.il_Description {
   margin: 2px 0 5px;
   font-size: 0.75rem;
-  font-weight: 400;
+  font-weight: 300;
   text-align: left;
 }
 
@@ -11205,7 +11210,7 @@ td.dcl_actions {
 }
 
 .ilDclRecordViewNav {
-  font-weight: 400;
+  font-weight: 300;
   padding: 3px;
   font-size: 0.75rem;
   width: 80%;
@@ -11326,16 +11331,16 @@ tr.dcl_comments_active > td {
 
 /* Modules/Forum */
 a.postread, a.postread:visited {
-  font-weight: 400;
+  font-weight: 300;
 }
 
 a.postunread, a.postunread:visited {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 a.postnew, a.postnew:visited {
   font-style: italic;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 blockquote.ilForumQuote {
@@ -11346,7 +11351,7 @@ blockquote.ilForumQuote {
 }
 
 div.ilForumQuoteHead {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 0.75rem;
   margin: 0 0 12px;
 }
@@ -11502,16 +11507,16 @@ li.ilFrmPostRow div.ilForm div.ilFormOption {
 .ilFrmPostCensorshipAdvice {
   margin: 0;
   padding: 0;
-  font-weight: 600;
+  font-weight: 400;
   color: #B54F00;
 }
 
 .ilFrmPostAttachmentsContainer {
   margin: 15px 0 0;
-  font-weight: 600;
+  font-weight: 400;
 }
 .ilFrmPostAttachmentsContainer a {
-  font-weight: 400;
+  font-weight: 300;
 }
 .ilFrmPostAttachmentsContainer img {
   vertical-align: middle;
@@ -11543,7 +11548,7 @@ li.ilPostingNeedsActivation {
 }
 
 .ilForumTreeTitleUnread {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .ilForumTreeUnlinkedContent {
@@ -12073,7 +12078,7 @@ td.il_ScormTableValue {
   }
   td.column {
     text-align: center;
-    font-weight: 600 !important;
+    font-weight: 400 !important;
   }
   td.bipolar {
     text-align: center;
@@ -12084,7 +12089,7 @@ td.il_ScormTableValue {
   }
   .questionblockTitle {
     font-size: 140%;
-    font-weight: 600;
+    font-weight: 400;
     color: #222222;
     margin-top: 1em;
     margin-bottom: 0px;
@@ -12114,7 +12119,7 @@ td.il_ScormTableValue {
   }
   table.categorywizard th, table.matrixrowwizard th {
     font-size: 90%;
-    font-weight: 600;
+    font-weight: 400;
     text-align: center;
   }
   .neutral_category_title {
@@ -12132,7 +12137,7 @@ td.il_ScormTableValue {
   .questionTitle {
     padding-top: 8px;
     padding-bottom: 4px;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 110%;
     border-bottom: 1px #aaa solid;
   }
@@ -12211,11 +12216,11 @@ div.ilSurveyPageEditActionMenu {
 .il-pagetitle .l-bar__space-keeper {
   --l-bar__element__margin-bottom: 1px;
   font-size: 0.875rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 .il-pagetitle .il-test-kiosk-head__participant-name {
   font-size: 1.115rem;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .col2 {
@@ -12818,7 +12823,7 @@ div.ilc_Page.readonly textarea[disabled] {
   background-image: url("images/object/answered.svg");
 }
 #tst_output #tst_left ul.shortlist li.active {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 #tst_output #tst_right .ilTstWorkingFormBlock_WorkingTime {
@@ -12831,7 +12836,7 @@ div.ilc_Page.readonly textarea[disabled] {
 }
 #tst_output #tst_right .ilTstWorkingFormBlock_WorkingTime .ilTstWorkingFormInfo_ProcessTimeLeft {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
 }
 #tst_output #tst_right h1.ilc_page_title_PageTitle {
   margin-bottom: 6px;
@@ -12908,7 +12913,7 @@ li.ilWikiBlockItem {
 .c-prg-actionnote__headline {
   background-color: #ffffff;
   padding: 9px 15px;
-  font-weight: 400;
+  font-weight: 300;
   text-align: left;
   vertical-align: middle;
 }
@@ -13284,7 +13289,7 @@ div.il_Block, table.il_Block {
 div.ilBlockHeader, div.ilBlockHeaderBig,
 td.ilBlockHeader, td.ilBlockHeaderBig {
   /* font-family: 'Open Sans Semibold';  deactivated, since it affects drop downs in the header */
-  font-weight: 600;
+  font-weight: 400;
   padding: 3px 0;
   margin: 0 9px;
   text-align: left;
@@ -13298,7 +13303,7 @@ div.ilBlockHeaderBig, td.ilBlockHeaderBig {
 }
 
 h2.ilBlockHeader {
-  font-weight: 600;
+  font-weight: 400;
   margin: 0;
   padding: 0;
   font-size: 1rem;
@@ -13306,7 +13311,7 @@ h2.ilBlockHeader {
 }
 
 h3.ilBlockHeader {
-  font-weight: 600;
+  font-weight: 400;
   margin: 0;
   padding: 0;
   font-size: 0.875rem;
@@ -13466,7 +13471,7 @@ table.calmini tr {
   background-color: #f9f9f9;
 }
 table.calmini th.calmini, table.calmini th.calminiweek {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 0.75rem;
 }
 table.calmini td.calminitoday {
@@ -13512,14 +13517,14 @@ table.calstd {
 
 .calheader {
   color: #161616;
-  font-weight: 400;
+  font-weight: 300;
   background-color: #ffffff;
 }
 
 th.calstd {
   text-align: center;
   background-color: #ffffff;
-  font-weight: 400;
+  font-weight: 300;
   border-spacing: 0px;
   border-collapse: collapse;
   border-width: 1px;
@@ -13701,7 +13706,7 @@ div.calfullcontent {
 p.il_cal_monthday {
   padding: 2px;
   margin: 0px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 p.il_cal_navigation {
@@ -13721,7 +13726,7 @@ table.calmini {
 th.calmini {
   text-align: center;
   font-size: 0.75rem;
-  font-weight: 400;
+  font-weight: 300;
   background-color: #f9f9f9;
 }
 
@@ -13946,7 +13951,7 @@ div.il_ContainerListItem {
 .ilContainerBlockHeader {
   background-color: #ffffff;
   padding: 9px 15px;
-  font-weight: 400;
+  font-weight: 300;
   text-align: left;
   vertical-align: middle;
 }
@@ -14934,7 +14939,7 @@ label {
   display: inline-block;
   max-width: 100%;
   margin-bottom: 5px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 input[type=search] {
@@ -15096,7 +15101,7 @@ fieldset[disabled] .checkbox label {
   min-height: 20px;
   padding-left: 20px;
   margin-bottom: 0;
-  font-weight: 400;
+  font-weight: 300;
   cursor: pointer;
 }
 
@@ -15136,7 +15141,7 @@ fieldset[disabled] .checkbox label {
   margin-bottom: 0;
   vertical-align: top;
   line-height: 28px;
-  font-weight: 400;
+  font-weight: 300;
   cursor: pointer;
 }
 
@@ -15480,7 +15485,7 @@ div[id$=color-picker-menu] {
 
 /* Services/Help */
 #ilHelpText .ilc_text_inline_Strong {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 #ilHelpBack {
@@ -15515,7 +15520,7 @@ a#ilHelpClose {
   background-position: 3px 3px;
   padding: 5px 5px 5px 30px;
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 400;
   border: none;
 }
 
@@ -15684,11 +15689,11 @@ div.ilStartupSection form.form-horizontal .form-group {
 
 /* Services/Mail */
 a.mailread, a.mailread:visited {
-  font-weight: 400;
+  font-weight: 300;
 }
 
 a.mailunread, a.mailunread:visited {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .iosMailFilter .checkbox {
@@ -16645,7 +16650,7 @@ div.ilRatingOverlay {
   padding: 5px;
 }
 #ilMMSearch ul li label {
-  font-weight: 400;
+  font-weight: 300;
 }
 
 #ilMMSearchMenu legend {
@@ -16713,13 +16718,13 @@ input.ilMainMenuSearch {
 }
 
 span.ilSearchHighlight {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 div.il_SearchFragment {
   margin: 2px 0 5px;
   font-size: 0.625rem;
-  font-weight: 400;
+  font-weight: 300;
   text-align: left;
 }
 
@@ -16914,7 +16919,7 @@ div.ilc_PredTextPlaceHolderThumb {
   font-size: 0.625rem;
   background: url("./images/placeholder/question_placeholder_thumb.png") no-repeat center;
   background-color: #f9f9f9;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 div.ilc_MediaPlaceHolderThumb {
@@ -16931,7 +16936,7 @@ div.ilc_PredTextPlaceHolderThumb {
 
 div.ilc_HeadlineThumb {
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 400;
   width: 100%;
   border-bottom: 1px solid #2c2c2c;
   color: #161616;
@@ -17039,7 +17044,7 @@ th {
 
 /* Services/Table */
 div.tblfooter {
-  font-weight: 400;
+  font-weight: 300;
   background-color: #ffffff;
   padding: 3px;
   font-size: 0.625rem;
@@ -17047,7 +17052,7 @@ div.tblfooter {
 }
 
 div.ilTableNav {
-  font-weight: 400;
+  font-weight: 300;
   margin-bottom: 6px;
   padding: 0 15px;
   font-size: 0.625rem;
@@ -17072,7 +17077,7 @@ div.ilTableNav .ilFloatRight .ilOverlay {
 
 tr.tblfooter {
   color: #161616;
-  font-weight: 400;
+  font-weight: 300;
   background-color: #ffffff;
   border-top: 1px solid #efefef;
 }
@@ -17084,7 +17089,7 @@ td.submit {
 }
 
 div.ilTableHeaderTitleBlock {
-  font-weight: 600;
+  font-weight: 400;
   padding: 3px;
   font-size: 0.75rem;
   color: #161616;
@@ -17100,7 +17105,7 @@ div.ilTableHeaderTitle + .ilHeaderDesc {
 }
 
 h3.ilTableHeaderTitleBlock {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 0.875rem;
   display: inline;
   padding: 0;
@@ -17155,7 +17160,7 @@ legend.ilTableFilter {
   border: none;
   padding: 0 15px;
   margin: 0;
-  font-weight: 400;
+  font-weight: 300;
   text-align: right;
 }
 legend.ilTableFilter > a.btn {
@@ -17205,7 +17210,7 @@ td.ilFilterOption {
 
 td.ilFilterType {
   font-size: 0.625rem;
-  font-weight: 600;
+  font-weight: 400;
   text-align: left;
   white-space: nowrap;
   padding: 3px;
@@ -17216,11 +17221,11 @@ div.ilTableContainer {
 }
 
 .tblheader {
-  font-weight: 400;
+  font-weight: 300;
 }
 
 tr.tblheader {
-  font-weight: 400;
+  font-weight: 300;
   background-color: #ffffff;
   font-size: 0.75rem;
   border-bottom: 1px solid #dddddd;
@@ -17388,7 +17393,7 @@ td.il_adv_sel {
   text-align: left;
   white-space: nowrap;
   cursor: pointer;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 #ilAdvSelListTable_item_creation td.il_adv_sel {
@@ -17572,7 +17577,7 @@ h1.ilExplorerHead {
   padding: 10px 5px 10px 28px;
   vertical-align: top;
   text-align: left;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 0.75rem;
 }
 
@@ -18067,7 +18072,7 @@ img.ilProfileImage {
 h3.ilProfileName {
   margin: 0 0 9px;
   padding: 0;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.115rem;
 }
 
@@ -18080,7 +18085,7 @@ div.ilProfileSection {
 h3.ilProfileSectionHead {
   margin: 0 0 3px;
   padding: 0;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1rem;
   color: #161616;
 }
@@ -18598,20 +18603,20 @@ div.ilFrame {
 }
 
 .obligatory {
-  font-weight: 400;
+  font-weight: 300;
   color: #800000;
   font-variant: normal;
 }
 
 .warning {
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;
   color: #d00;
 }
 
 div.Access {
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;
   text-decoration: underline;
   color: #d00;
 }
@@ -18623,26 +18628,26 @@ div.Access {
 
 .default {
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .quote {
   font-style: italic;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .subtitle {
   font-style: italic;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 0.75rem;
 }
 
 .questiontext {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .bold {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .light {
@@ -18653,11 +18658,4 @@ div.Access {
   /*background: $il-standard-page-header-bg-color;*/
 }
 
-/*
-// test to overwrite specific selectors/parts of components
-.il-mainbar-triggers .btn-bulky.engaged {
-    box-shadow: 0 0 10px #ccc;
-}
-*/
-
-/*# sourceMappingURL=__lvm.css.map */
+/*# sourceMappingURL=skin-customer.css.map */

@@ -4,6 +4,14 @@
               id = "delos"
               image_directory = "images"/>
 
+    <style 	name = "cate-white"
+              id = "cate-white"
+              css_file = "cate-white"/>
+
+    <style 	name = "lvm"
+              id = "lvm"
+              css_file = "lvm"/>
+
     <style 	name = "skin-customer"
               id = "skin-customer"
               css_file = "skin-customer"/>

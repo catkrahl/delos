@@ -1,6 +1,6 @@
 // customer color map
 $customer-colors: (
-        "cate-color-1": #c0069b,
+        "cate-color-1": #009b31,
         "cate-color-2": #df0226,
         "cate-color-3": #ec4016,
         "cate-color-4": #faae1d,
@@ -18,6 +18,7 @@ $customer-colors: (
     $il-main-darker-bg: map-get($customer-colors, "cate-bg-third")
 );
 
+
 @use "../skin-base.scss" as base;
 /*
 // test to overwrite specific selectors/parts of components
@@ -25,5 +26,4 @@ $customer-colors: (
     box-shadow: 0 0 10px #ccc;
 }
 */
-
 
