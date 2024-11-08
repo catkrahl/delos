@@ -1,5 +1,4 @@
 // custoemr color map
-/*
 $customer-colors: (
         "cate-color-1": #c0069b,
         "cate-color-2": #df0226,
@@ -10,27 +9,16 @@ $customer-colors: (
         "cate-bg-secondary": #ffffff,
         "cate-bg-third": #efefef
 );
-*/
 
-@use "../010-settings/" as s with (
-    /*
+@use "../010-settings/" as * with (
     $il-main-color: map-get($customer-colors, "cate-color-1"),
     $il-headings-color: map-get($customer-colors, "cate-color-1"),
     $il-main-bg: map-get($customer-colors, "cate-bg-primary"),
     $il-main-dark-bg: map-get($customer-colors, "cate-bg-secondary"),
     $il-main-darker-bg: map-get($customer-colors, "cate-bg-third")
-    */
-    $il-main-color: #c0069b,
-    $il-headings-color: #c0069b,
-    $il-main-bg: #f2f2f2,
-    $il-main-dark-bg: #ffffff,
-    $il-main-darker-bg: #efefef
 );
 
-
 @use "../skin-base.scss" as base;
-
-
 
 // test to overwrite specific selectors/parts of components
 .il-mainbar-triggers .btn-bulky.engaged {
