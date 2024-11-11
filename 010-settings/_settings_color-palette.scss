@@ -5,7 +5,7 @@
 @use 'sass:color';
 
 //** For Standard Buttons, Main color used in various places, used to be $brand-primary
-$il-main-color: #4c6586 !default;
+$il-main-color: #c0069b !default;
 //** For Primary Buttons, used to point to interactions with a special importance, used to be $brand-secondary
 $il-secondary-color: #6ea03c !default;
 //** Used to indicate some success, used to be $brand-success
@@ -55,7 +55,7 @@ $il-link-color: $il-main-color !default;
 $il-link-hover-color: darken($il-link-color, 10%) !default;
 
 //** Used to set focus on interactive elements for keyboard navigation.
-$il-focus-color: #0078D7 !default;
+$il-focus-color: $il-main-color !default;
 $il-focus-protection-color: #FFFFFF !default;
 
 //== Alert
@@ -99,5 +99,6 @@ $il-extended-color-8: #f75e82 !default;
 $il-extended-color-9: #ea4d54 !default;
 
 //** all variants of letter avatar background colors (MUST be 26), note for a11y reason, they must be in contrast 3x1 to white (foreground color)
-$il-avatar-letter-color-variants: (#0e6252, #107360, #896F06, #A06608, #176437, #196f3d, #B25E15, #a04000, #1d6fa5, #1b557a, #bf2718, #81261d, #713b87, #522764, #6A747C, #34495e, #2c3e50, #566566, #90175a, #9e2b6e, #d22f10, #666d4e, #715a32, #83693a, #963a30, #DE2F1B) !default;
+/*$il-avatar-letter-color-variants: (#0e6252, #107360, #896F06, #A06608, #176437, #196f3d, #B25E15, #a04000, #1d6fa5, #1b557a, #bf2718, #81261d, #713b87, #522764, #6A747C, #34495e, #2c3e50, #566566, #90175a, #9e2b6e, #d22f10, #666d4e, #715a32, #83693a, #963a30, #DE2F1B) !default;*/
+$il-avatar-letter-color-variants: ($il-main-color, $il-main-color, $il-main-color, $il-main-color, $il-main-color, $il-main-color, $il-main-color, $il-main-color, $il-main-color, $il-main-color, $il-main-color, $il-main-color, $il-main-color, $il-main-color, $il-main-color, $il-main-color, $il-main-color, $il-main-color, $il-main-color, $il-main-color, $il-main-color, $il-main-color, $il-main-color, $il-main-color, $il-main-color, $il-main-color) !default;
 

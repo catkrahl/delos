@@ -104,7 +104,7 @@ div.il-system-infos {
     display: flex;
     flex-direction: row;
     height: $il-standard-page-header-height;
-    padding: 0 $il-padding-xlarge-horizontal;
+    padding: 0 $il-padding-xlarge-horizontal 0 ($il-padding-xlarge-horizontal+10px);
     position: fixed;
     width: 100%;
     justify-content: space-between;
@@ -119,6 +119,9 @@ div.il-system-infos {
   	align-items: center;
 	a {
 		display: block; // so keyboard focus surrounds logo
+	}
+	img {
+		height: (($il-standard-page-logo-height)-8px);
 	}
 }
 

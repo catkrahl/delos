@@ -1,0 +1,30 @@
+// customer color map
+$customer-colors: (
+        "customer-color-1": #009b31,
+        "customer-color-2": #df0226,
+        "customer-color-3": #ec4016,
+        "customer-color-4": #faae1d,
+        "customer-color-5": #4a154b,
+        "customer-bg-primary": #ffffff,
+        "customer-bg-secondary": #f9f9f9,
+        "customer-bg-dark": #efefef
+);
+
+@use "../010-settings/" as * with (
+    $il-main-color: map-get($customer-colors, "customer-color-1"),
+    $il-headings-color: map-get($customer-colors, "customer-color-1"),
+    $il-main-bg: map-get($customer-colors, "customer-bg-primary"),
+    $il-main-dark-bg: map-get($customer-colors, "customer-bg-primary"),
+    $il-main-darker-bg: map-get($customer-colors, "customer-bg-dark"),
+    $il-standard-page-header-bg-color: map-get($customer-colors, "customer-bg-primary"),
+    $il-mainbar-btn-bg-color: map-get($customer-colors, "customer-bg-primary") //controls the mainbar-bg
+);
+
+@use "../cate-base.scss" as base;
+/*
+// test to overwrite specific selectors/parts of components
+.il-mainbar-triggers .btn-bulky.engaged {
+    box-shadow: 0 0 10px #ccc;
+}
+*/
+
