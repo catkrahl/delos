@@ -1,21 +1,20 @@
-@use "../../../010-settings/"as *;
+@use "../../../010-settings" as *;
 @use "../../../010-settings/legacy-settings/legacy-settings_symbol" as *;
 @use "../../../030-tools/tool_focus-outline" as f;
 @use "../../../030-tools/tool_screen-reader-only" as *;
 @use "../../../030-tools/tool_multi-line-cap" as t-line-cap;
 @use "../../../050-layout/basics" as *;
-@use "../../../050-layout/standardpage/" as *;
+@use "../../../050-layout/standardpage" as *;
 @use "../../../070-components/legacy/component_screen-reader-only" as *;
 
 // MAINBAR VARIABLES
 $il-mainbar-btn-padding: 0;
 $il-mainbar-btn-label-icon-gap: $il-padding-xs-vertical;
 
-$il-mainbar-btn-border-radius: $il-border-radius-base;
-
-$il-mainbar-btn-border: 1px solid $il-standard-page-border-light-color;
+$il-mainbar-btn-border-radius: $il-border-radius-base !default; // ###_cate-skin-patch
+$il-mainbar-btn-border: 0px solid $il-standard-page-border-light-color; // ###_cate-skin-patch
 $il-mainbar-btn-label-size: $il-font-size-xsmall;
-$il-mainbar-trigger-icon-size: 25px;
+$il-mainbar-trigger-icon-size: 32px; // ###_cate-skin-patch
 $il-mainbar-remove-tools-btn-height: 45px;
 
 // TOOLS VARIABLES

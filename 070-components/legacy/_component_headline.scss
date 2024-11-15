@@ -3,7 +3,9 @@
 
 /* ---------------- headlines ------------------ */
 h1.il-page-content-header {
-	color: $il-neutral-color;
+	// ###_cate-skin-patch
+	color: $il-main-color;
+	// ###_end-patch
 	vertical-align: middle;
 	font-size: $il-font-size-h1;
 	font-weight: $il-font-weight-bold;

@@ -13,7 +13,9 @@ $il-avatar-size-large: $il-avatar-size * 2;
 //** border-radius for image avatar
 $il-avatar-border-radius: 50%;
 //** border size for letter avatars
-$il-avatar-border-size: 2px;
+// ###_cate-skin-patch
+$il-avatar-border-size: 0px;
+// ###_patch-end
 $il-avatar-small-border-size: 0px;
 //** border style for letter avatars
 $il-avatar-border-style: solid;

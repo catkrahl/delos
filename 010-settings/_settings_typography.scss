@@ -5,8 +5,8 @@
 //##
 
 //** if left unchanged, you have to copy delos fonts folder to your skin folder. To use the delos fonts in your skin, please change this value (in custom less data or variables.scss of your custom skin) to "../../../../templates/default/fonts/"
-$il-web-font-path: "../fonts/" !default;
-$il-font-family-sans-serif: 'Nunito', Verdana, Arial, Helvetica, sans-serif !default;
+$il-web-font-path: "./fonts/" !default;
+$il-font-family-sans-serif: 'Open Sans', Verdana, Arial, Helvetica, sans-serif !default;
 
 $il-headings-font-family: $il-font-family-sans-serif !default;
 
@@ -47,3 +47,4 @@ $il-headings-font-weight: 500 !default;
 
 $il-link-decoration: none !default;
 $il-link-hover-decoration: underline !default;
+

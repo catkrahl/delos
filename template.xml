@@ -4,11 +4,11 @@
               id = "delos"
               image_directory = "images"/>
 
-    <style 	name = "__cate"
-              id = "__cate"
-              css_file = "__cate"/>
+    <style 	name = "skin_cate"
+              id = "skin_cate"
+              css_file = "skin_cate"/>
 
-    <style 	name = "__lvm"
-              id = "__lvm"
-              css_file = "__lvm"/>
+    <style 	name = "skin_lvm"
+              id = "skin_lvm"
+              css_file = "skin_lvm"/>
 </template>

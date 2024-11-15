@@ -104,7 +104,9 @@ div.il-system-infos {
     display: flex;
     flex-direction: row;
     height: $il-standard-page-header-height;
+	// ###_cate-skin-patch_###
     padding: 0 $il-padding-xlarge-horizontal 0 ($il-padding-xlarge-horizontal+10px);
+	// ###_end
     position: fixed;
     width: 100%;
     justify-content: space-between;
