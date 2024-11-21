@@ -1,0 +1,40 @@
+/* content styles */
+@use "../../010-settings" as *;
+
+// variables
+$base-color-1: $il-main-color;
+$text-color: $il-text-color;
+$content-link-color: $il-link-color;
+
+// Special BulletLists
+.ilc_section_ListeHaken ul.ilc_list_u_BulletedList,
+.ilc_section_ListePfeil ul.ilc_list_u_BulletedList {
+    list-style: none;
+    li:before {
+        color: $base-color-1;
+    }
+}
+
+.ilc_section_ListeHaken ul.ilc_list_u_BulletedList li:before {
+    font-family: 'cat icons';
+    content: '\ea10'; // checkmark
+    margin: 0 6px 0 -21px;
+}
+
+.ilc_section_ListePfeil ul.ilc_list_u_BulletedList li:before {
+    font-family: 'il-icons';
+    font-size: 0.8rem;
+    content: '\e606'; // arrow from slate
+    margin: 0 5px 0 -17px;
+}
+
+.ilc_section_ListePfeil ul.ilc_list_u_BulletedList li {
+    a.ilc_link_ExtLink, a.ilc_link_IntLink {
+        color: $text-color;
+        text-decoration: none;
+        &:hover {
+            color: $content-link-color;
+            text-decoration: underline;
+        }
+    }
+}

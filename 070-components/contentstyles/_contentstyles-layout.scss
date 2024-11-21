@@ -1,0 +1,73 @@
+@use "../../010-settings" as *;
+@use "../../010-settings/legacy-settings/legacy-settings_symbol" as *;
+@use "../../050-layout/basics" as *;
+@use "../../050-layout/standardpage" as *;
+
+// CATE.LESS 3041-3105
+// variables should may be replaced by il9-variables?
+$spacing-xsmall: .3rem;
+$spacing-small: .8rem;
+$spacing-medium: 1.2rem; // one value should be equal to @font-size-base
+$spacing-large: 2.5rem;
+$spacing-xlarge: 4rem;
+
+// placeholders
+%LimitierteBreite {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: $spacing-small !important; // needs important so it has a margin even if it's a last child
+}
+body {
+    .ilc_section_LimitierteBreite,
+    .ilc_section_LimitierteBreiteLinks {
+       @extend %LimitierteBreite;
+        max-width: 1100px;
+    }
+
+    //#en#.ilc_section_ContentContainerNarrow,
+    .ilc_section_LimitierteBreiteEng,
+    .ilc_section_LimitierteBreiteEngLinks {
+       @extend %LimitierteBreite;
+        max-width: 900px;
+    }
+
+    .ilc_section_LimitierteBreiteWeit,
+    .ilc_section_LimitierteBreiteWeitLinks {
+       @extend %LimitierteBreite;
+        max-width: 1400px;
+    }
+
+    .ilc_section_LimitierteBreiteLinks,
+    .ilc_section_LimitierteBreiteEngLinks,
+    .ilc_section_LimitierteBreiteWeitLinks {
+        margin: 0;
+    }
+
+    .ilc_section_AbstandKlein {
+        height: $spacing-small;
+        margin: 0;
+    }
+
+    .ilc_section_AbstandMittel {
+        height: $spacing-medium;
+        margin: 0;
+    }
+
+    .ilc_section_AbstandGross {
+        height: $spacing-large;
+        margin: 0;
+    }
+
+    .ilc_section_AusrichtenMittig {
+        text-align: center;
+    }
+
+    .ilc_section_AusrichtenRechts {
+        text-align: right;
+    }
+
+    .ilc_section_AusrichtenSpalte {
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,1925 @@
+
+/*
+========================================================
+    general content styles
+========================================================
+*/
+
+@cat-accordion-head-color-hover: @il-slate-bulky-bg-color-engaged;
+@cat-accordion-head-text-color-hover: @text-color;
+
+body {
+    // apply default margin
+    .row,
+    .ilCOPageSection,
+    .ilc_Paragraph,
+    [class*="ilc_heading"],
+    .ilc_media_cont_MediaContainer,
+    .cat-search-wrapper, .ilPageTagSearch {
+        margin-top: 0;
+        margin-bottom: @spacing-small;
+    }
+
+    // last child margin exception
+    // remove margin below the last child inside a box or card
+    // counteracted with !important for box and card elements themsleves that need to have a margin below them even when they are the last child e.g. in a column
+    // all elements: .ilCOPapeSection > *:last-child
+    .ilCOPageSection > .ilCOPageSection:last-child,
+    .ilCOPageSection > .ilc_Paragraph:last-child,
+    .ilCOPageSection row:last-child,
+    .ilCOPageSection > .cat-search-wrapper:last-child,
+    .ilCOPageSection > .ilPageTagSearch:last-child,
+    td > .ilc_Paragraph:last-child {
+        margin-bottom: 0;
+    }
+
+    // after p
+    .ilc_Paragraph {
+        margin-bottom: @spacing-medium;
+    }
+
+    // all headlines
+    [class*="ilc_heading"] {
+        font-weight: @font-weight-headline;
+    }
+
+    // heading 1
+    h1.ilc_heading1_Headline1,
+    div.ilc_text_block_Headline1 {
+        font-size: @cat-h2-font-size;
+        line-height: @cat-h-line-height;
+    }
+
+    // between p and h1
+    div.ilc_text_block_Standard + h1.ilc_heading1_Headline1,
+    div.ilc_text_block_Standard + div.ilc_text_block_Headline1 {
+        margin-top: @spacing-xlarge;
+    }
+
+    // heading 2
+    h2.ilc_heading2_Headline2,
+    div.ilc_text_block_Headline2 {
+        font-size: @cat-h3-font-size;
+        line-height: @cat-h-line-height;
+    }
+
+    // between p and h2
+    div.ilc_text_block_Standard + h2.ilc_heading2_Headline2,
+    div.ilc_text_block_Standard + div.ilc_text_block_Headline2 {
+        margin-top: @spacing-large;
+    }
+
+    // heading 3
+    h3.ilc_heading3_Headline3,
+    div.ilc_text_block_Headline3 {
+        font-size: @cat-h4-font-size;
+        line-height: @cat-h-line-height;
+    }
+
+    // between p and h3
+    div.ilc_text_block_Standard + h3.ilc_heading3_Headline3,
+    div.ilc_text_block_Standard + div.ilc_text_block_Headline2 {
+        margin-top: @spacing-medium;
+    }
+
+    // SmallText
+    .ilc_text_block_SmallText,
+    .ilc_text_block_KleinerText {
+        font-size: .8rem;
+        line-height: 1rem;
+    }
+
+    ul.ilc_list_u_BulletedList,
+    ol.ilc_list_o_NumberedList {
+        // takes margin from paragraph
+        li,
+        li + li {
+            margin-bottom: @spacing-xsmall;
+        }
+    }
+
+    .ilc_text_block_Mnemonic,
+    .ilc_section_Mnemonic {
+        .border-radius();
+        margin-right: 0px;
+        margin-left: 0px;
+        border: 2px solid @base-color-1;
+        .cat-padding-medium();
+        margin-bottom: @spacing-large;
+    }
+    .ilc_Paragraph + .ilc_text_block_Mnemonic,
+    .ilc_Paragraph + .ilc_section_Mnemonic {
+        margin-top: @spacing-large;
+    }
+
+    // Citation block and inline style
+    .ilc_text_block_Citation,
+    .ilc_text_inline_Quotation {
+        color: @text-color;
+        font-style: italic;
+    }
+    .ilc_text_block_Citation {
+        color: @base-color-2;
+        font-size: 1.5rem;
+        margin-left: @spacing-medium;
+    }
+
+    // Additional
+    .ilc_text_block_Additional,
+    .ilc_section_Additional {
+        border: 0;
+        border-left: 4px solid @base-color-1;
+        padding: @spacing-small @spacing-medium;
+        margin-left: @spacing-medium;
+        margin-bottom: @spacing-large;
+    }
+    .ilc_Paragraph + .ilc_text_block_Additional,
+    .ilc_Paragraph + .ilc_section_Additional {
+        margin-top: @spacing-large;
+    }
+
+    .ilc_text_block_Remark,
+    .ilc_section_Remark {
+        .border-radius();
+        background-color: @gray-100;
+        // border: 1px solid @gray-060;
+        border: none;
+        .cat-padding-medium();
+        margin-bottom: @spacing-large;
+    }
+    .ilc_Paragraph + .ilc_text_block_Remark,
+    .ilc_Paragraph + .ilc_section_Remark {
+        margin-top: @spacing-large;
+    }
+
+    .ilc_section_AdvancedKnowledge:not([style*="display: none"]),
+    .ilc_section_Excursus {
+        .border-radius();
+        background-color: @base-color-1-bg-light;
+        background-image: none;
+        // border: 1px solid mix(#fff, @base-color-1, 85%);
+        border: none;
+        .cat-padding-medium();
+        margin-bottom: @spacing-large;
+    }
+    .ilc_Paragraph + .ilc_section_AdvancedKnowledge:not([style*="display: none"]),
+    .ilc_Paragraph + .ilc_section_Excursus {
+        margin-top: @spacing-large;
+    }
+
+    .ilc_section_Special {
+        .border-radius();
+        background-color: mix(#fff, @base-color-2, 96%);
+        border: none;
+        .cat-padding-medium();
+        margin-bottom: @spacing-large;
+    }
+    .ilc_Paragraph + .ilc_section_Special {
+        margin-top: @spacing-large;
+    }
+
+    .ilc_text_block_Example,
+    .ilc_section_Example {
+        border: none;
+        border-top: 2px solid @base-color-1;
+        border-bottom: 2px solid @base-color-1;
+        padding: @spacing-medium @spacing-medium @spacing-medium @spacing-large;
+        margin-bottom: @spacing-large;
+    }
+    .ilc_Paragraph + .ilc_text_block_Example,
+    .ilc_Paragraph + .ilc_section_Example {
+        margin-top: @spacing-large;
+    }
+
+    .ilc_text_inline_Comment {
+        color: @gray-060;
+    }
+
+    .ilc_text_inline_Accent {
+        color: @base-color-1;
+    }
+
+
+
+    // Questions
+    div.ilc_question_Standard {
+        background-color: transparent;
+        background-image: none !important;
+        border: none;
+        margin: 20px 0 0;
+        padding: 10px 30px 60px 10px;
+
+        .ilc_qtitle_Title  {
+            font-size: 1.1rem;
+            line-height: 1.6rem;
+            margin-bottom: 1rem;
+        }
+
+        .ilc_answers  {
+            color: @text-color;
+        }
+    }
+
+    .ilc_question_MatchingQuestion {
+        .droparea {
+            background-color: @white;
+            border: 3px solid transparent;
+            .border-radius();
+            min-height: 100px;
+            margin: @spacing-small;
+            padding: @spacing-small 0 @spacing-medium 0;
+        }
+        .draggable, .draggableHelper {
+            border: none;
+            background-color: @base-color-1;
+            color: @text-color-white;
+            .border-radius();
+            .border();
+            margin: @spacing-small;
+            padding: @spacing-small;
+        }
+        .draggableDisabled {
+            opacity: 0.5;
+        }
+    }
+
+    // Content Button
+    //
+
+    //#en#span.ilc_text_inline_ContentButtonDefaultSmall,
+    //#en#span.ilc_text_inline_ContentButtonDefaultBig,
+    /*
+    span.ilc_text_inline_KnopfStandardKlein,
+    span.ilc_text_inline_KnopfStandardGross
+    */
+    [class*="KnopfStandard"] {
+        .btn;
+        .btn-default;
+        a.ilc_link_ExtLink, a.ilc_link_IntLink {
+            color: @btn-default-text-color;
+            // important so buttons in linked cards are not underlined
+            text-decoration: none !important;
+        }
+        &:hover,
+        &:active,
+        &:focus {
+            a.ilc_link_ExtLink, a.ilc_link_IntLink {
+                color: @btn-default-text-color-hover;
+            }
+        }
+    }
+
+    //#en#span.ilc_text_inline_ContentButton,
+    span.ilc_text_inline_KnopfKlein,
+    span.ilc_text_inline_KnopfGross {
+        .btn;
+        .btn-primary;
+        a.ilc_link_ExtLink, a.ilc_link_IntLink {
+            color: @btn-primary-text-color;
+            text-decoration: none !important;
+        }
+        &:hover,
+        &:active,
+        &:focus {
+            a.ilc_link_ExtLink, a.ilc_link_IntLink {
+                color: @btn-primary-text-color-hover;
+            }
+        }
+    }
+
+    //#en#span.ilc_text_inline_ContentButtonSecondarySmall,
+    //#en#span.ilc_text_inline_ContentButtonSecondaryBig,
+    [class*="KnopfSekundaerfarbe"]
+        /*
+        span.ilc_text_inline_KnopfSekundaerfarbeKlein,
+        span.ilc_text_inline_KnopfSekundaerfarbeGross
+        */ {
+        .btn;
+        .btn-secondary;
+        a.ilc_link_ExtLink, a.ilc_link_IntLink {
+            color: @btn-secondary-text-color;
+            text-decoration: none !important;
+        }
+        &:hover,
+        &:active,
+        &:focus {
+            a.ilc_link_ExtLink, a.ilc_link_IntLink {
+                color: @btn-secondary-text-color-hover;
+            }
+        }
+    }
+
+    //#en#span.ilc_text_inline_ContentButtonBig,
+    span.ilc_text_inline_KnopfGross,
+        //#en#span.ilc_text_inline_ContentButtonSecondaryBig,
+    span.ilc_text_inline_KnopfSekundaerfarbeGross,
+        //#en#span.ilc_text_inline_ContentButtonDefaultBig,
+    span.ilc_text_inline_KnopfStandardGross,
+        // TMS-6879
+    .cat-ext-search-wrapper > .btn {
+        padding: @input-big-vertical-padding @input-big-horizontal-padding;
+    }
+
+
+    // fix for higher specificity
+    //
+    //#en#.ilc_section_ExpandButtonWidth .ilc_Paragraph.ilc_text_block_Standard,
+    .ilc_section_KnopfVolleBreite .ilc_Paragraph.ilc_text_block_Standard {
+        /*
+        //#en#span.ilc_text_inline_ContentButton,
+        span.ilc_text_inline_KnopfKlein,
+        span.ilc_text_inline_KnopfGross,
+            //#en#span.ilc_text_inline_ContentButtonSecondarySmall,
+            //#en#span.ilc_text_inline_ContentButtonSecondaryBig,
+        span.ilc_text_inline_KnopfSekundaerfarbeKlein,
+        span.ilc_text_inline_KnopfSekundaerfarbeGross,
+            //#en#span.ilc_text_inline_ContentButtonDefaultSmall,
+            //#en#span.ilc_text_inline_ContentButtonDefaultBig,
+        span.ilc_text_inline_KnopfStandardKlein,
+        span.ilc_text_inline_KnopfStandardGross
+        */
+        [class*="Knopf"],
+        [class*="KnopfStandard"],
+        [class*="KnopfSekundaerfarbe"] {
+            display: block;
+        }
+    }
+
+    // moved to the end so it comes later than the mixins
+
+    //#en#span.ilc_text_inline_ContentButton,
+    /*
+    span.ilc_text_inline_KnopfKlein,
+    span.ilc_text_inline_KnopfGross,
+        //#en#span.ilc_text_inline_ContentButtonSecondarySmall,
+        //#en#span.ilc_text_inline_ContentButtonSecondaryBig,
+    span.ilc_text_inline_KnopfSekundaerfarbeKlein,
+    span.ilc_text_inline_KnopfSekundaerfarbeGross,
+        //#en#span.ilc_text_inline_ContentButtonDefaultSmall,
+        //#en#span.ilc_text_inline_ContentButtonDefaultBig,
+    span.ilc_text_inline_KnopfStandardKlein,
+    span.ilc_text_inline_KnopfStandardGross
+    */
+    span[class*="Knopf"],
+    span[class*="KnopfStandard"],
+    span[class*="KnopfSekundaerfarbe"] {
+        text-decoration: none;
+        margin: @btn-margin;
+    }
+
+    /* #3643 links around blocks with content btn */
+    a[class*="Knopf"] {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    /* Old blocks
+
+    div.ilc_text_block_List {
+        margin: 3px 0;
+    }
+
+    // Block
+    div.ilc_section_Block,
+    a.ilc_section_Block {
+        background-color: @global-bg-color;
+        border: @border;
+        margin: 10px 0;
+        padding: 5px 10px;
+    }
+
+    */
+
+    .ilc_section_PlayIcon,
+    .ilc_section_InfoIcon {
+        .ilc_media_cont_MediaContainer {
+            position: relative;
+            a:after {
+                border: 4px solid @white;
+                border-radius: 50%;
+                color: @text-color-white;
+                content: "\e975";
+                font-size: 37px;
+                height: 60px;
+                left: 50%;
+                margin: -30px;
+                opacity: .6;
+                padding: 1px 11px;
+                position: absolute;
+                top: 50%;
+                width: 60px;
+                background: rgba(0, 0, 0, 0.25);
+                box-shadow: 0px 0px 20px 11px rgba(0, 0, 0, 0.25);
+            }
+
+            &:hover a:after {
+                opacity: 1;
+            }
+        }
+    }
+
+    .ilc_section_PlayIcon .ilc_media_cont_MediaContainer a:after {
+        font-family: cat icons;
+    }
+
+    .ilc_section_InfoIcon .ilc_media_cont_MediaContainer a:after {
+        content: "i";
+        font-weight: 600;
+        text-align: center;
+    }
+}
+
+// accordeon
+body {
+    .ilc_va_cntr_VAccordCntr {
+        margin: @spacing-small 0;
+    }
+
+    .ilc_va_icntr_VAccordICntr {
+        background-color: transparent;
+        border: none;
+        margin-bottom: 0;
+    }
+
+    .ilc_va_ihead_VAccordIHead {
+        background-color: transparent;
+        background-image: none;
+        color: @text-color;
+        cursor: pointer;
+        font-size: 1.1rem;
+        font-weight: @font-weight-text-selected;
+        line-height: 1.5;
+        min-height: auto;
+        padding: 10px;
+        text-transform: none;
+        transition: .3s all;
+
+        &:hover {
+            color: @cat-accordion-head-text-color-hover;
+            background-color: @cat-accordion-head-color-hover;
+            .ilc_va_ihead_VAccordIHeadCap:before {
+                color: @cat-accordion-head-text-color-hover;
+            }
+        }
+
+        .ilc_va_ihead_VAccordIHeadCap,
+        .ilc_va_ihcap_VAccordIHeadCap {
+            position: relative; // so before element can be positioned absolute
+            width: 100%; // in case icon sits at right
+            display: flex;
+            &:before {
+                background-image: none;
+                content: "\e604";
+                color: @text-color-headline;
+                display: inline-block;
+                font-family: "il-icons"; // same as slate
+                font-size: 0.9rem;
+                font-weight: 600;
+                margin-right: @spacing-small * 1.375; // keeps distance when icon left, corrected value for same indent as paragraph
+                padding-top: 0.14rem;
+            }
+        }
+    }
+
+    .ilc_va_iheada_VAccordIHeadActive {
+        // background-color: @global-bg-color;
+        color: @base-color-1;
+        .ilc_va_ihead_VAccordIHeadCap {
+            &:before {
+                content: "\e607";
+            }
+        }
+    }
+
+    .ilc_va_icont_VAccordICont {
+        padding: 5px 0px 5px 40px;
+        background-color: transparent;
+    }
+}
+
+// alternative accordeon styles
+//
+//#en#.ilc_section_AccordeonSingleOutlined,
+.ilc_section_AkkordeonEinzelnUmrandet {
+    .ilc_va_icntr_VAccordICntr {
+        .border();
+        .border-radius-small();
+        margin-bottom: @spacing-small;
+        overflow: visible;
+    }
+    .ilc_va_ihead_VAccordIHead {
+        padding: @spacing-small @spacing-small @spacing-small @spacing-medium;
+    }
+    .ilc_va_icont_VAccordICont {
+        padding: 0 @spacing-small @spacing-medium @spacing-medium * 2.66;
+    }
+}
+
+//#en#.ilc_section_AccordeonOutlinedSegmented,
+.ilc_section_AkkordeonUmrandetSegmentiert {
+    .border();
+    .border-radius-small();
+    border-bottom-width: 0;
+    overflow: visible;
+    .ilc_va_cntr_VAccordCntr {
+        margin: 0;
+    }
+    .ilc_va_icntr_VAccordICntr {
+        border-bottom: @border;
+        &:last-of-type {
+            border-bottom: none;
+        }
+    }
+    .ilc_va_ihead_VAccordIHead {
+        padding: @spacing-small @spacing-small @spacing-small @spacing-medium;
+    }
+    .ilc_va_iheada_VAccordIHeadActive {
+        background-color: @gray-100;
+    }
+    .ilc_va_icont_VAccordICont {
+        padding: @spacing-small @spacing-small @spacing-medium @spacing-medium * 2.66;
+        background-color: @gray-100;
+    }
+}
+
+.ilc_section_AkkordeonPfeilRechts {
+    .ilc_va_ihead_VAccordIHead .ilc_va_ihead_VAccordIHeadCap {
+        justify-content: space-between;
+        &:before {
+            order: 2;
+            margin-right: 0;
+        }
+    }
+}
+
+body .ilc_section_AkkordeonButton,
+body *[class*="ilc_section_Karte"] .ilc_section_AkkordeonButton {
+    .ilc_va_cntr_VAccordCntr {
+        margin: 0;
+    }
+    .ilc_va_ihead_VAccordIHead,
+    .ilc_va_iheada_VAccordIHeadActive {
+        .btn();
+        .btn-default();
+        .input-padding-big();
+        display: block;
+        margin-bottom: @spacing-medium;
+        min-height: auto;
+        .ilc_va_ihead_VAccordIHeadCap,
+        .ilc_va_ihcap_VAccordIHeadCap {
+            display: block;
+            &::before {
+                display: none;
+            }
+        }
+    }
+    .ilc_va_ihead_VAccordIHead {
+        margin: 0;
+        &.ilc_va_iheada_VAccordIHeadActive {
+            margin-bottom: @spacing-small;
+        }
+    }
+    .ilc_va_icont_VAccordICont {
+        padding: 0;
+        background-color: transparent;
+    }
+}
+
+// carousel fix
+// because there is no max content width in il60 carousels go crazy. Should get fixed in Ilias standard!
+.owl-carousel.owl-loaded {
+    display: grid;
+}
+
+// Owl carousel inside of full-height blocks
+// see full height (VolleHohe) for styling of the bare div
+.ilc_section_VolleHoehe > div > .owl-carousel.owl-loaded {
+    height: 100%;
+    .owl-stage-outer,
+    .owl-stage,
+    .ilc_ca_icntr_CarouselICntr,
+    .ilc_ca_icntr_CarouselICntr > div:not(:first-child), // not the headline but the content
+    .ilc_ca_icont_CarouselICont,
+    .owl-item {
+        height: 100%
+    }
+}
+
+/*
+========================================================
+topic list
+========================================================
+*/
+
+// @name-element-zustand-eigenschaft
+// elements always parent to child accord-head-text-color
+
+// general cards
+@content-card-text-color: @text-color;
+@content-card-bg-color: @global-bg-color;
+@content-card-bg-hover-color: @il-slate-bulky-bg-color-engaged;
+@content-card-link-bar-min-height: 4.5rem; // should hold 2 lines of text before pushing height
+
+// tile cards
+@content-card-colored-tile-text: @text-color-white;
+@content-card-colored-tile-bg: fade(@gray-040, 50%);
+@content-card-gradient-bg-color: @global-bg-color;
+@content-card-gradient-text-color: @text-color;
+
+// accordeon
+@content-card-accord-head-text-active-color: @base-color-1;
+// should content-card-accord-head-bg, content-card-accord-head-text and hover states exist?
+@content-card-accord-level1-content-bg-color: mix(#000000, @global-bg-color, 3%);
+@content-card-accord-level2-content-bg-color: mix(#000000, @global-bg-color, 6%);
+@content-card-accord-level3-content-bg-color: mix(#000000, @global-bg-color, 9%);
+
+//
+// Paddings
+//
+
+body {
+    //#en#.ilc_section_PaddingSmall,
+    .ilc_section_InnenabstandKlein {
+        padding: @spacing-small;
+        margin: 0;
+        width: 100%; // to take full width in position absolute contexts
+    }
+
+    //#en#.ilc_section_PaddingMedium,
+    .ilc_section_InnenabstandMittel {
+        .cat-padding-medium();
+        margin: 0;
+        width: 100%;
+    }
+
+    //#en#.ilc_section_InnenabstandLarge,
+    .ilc_section_InnenabstandGross {
+        padding: @spacing-large;
+        margin: 0;
+        width: 100%;
+    }
+
+    .ilc_section_SpaltenOhneAbstand > .row {
+        margin: 0;
+        [class*=" col-"] {
+            padding: 0;
+        }
+    }
+}
+
+// General cards
+//
+// - styling of the container
+// - differences between <div> and <a> blocks
+// - styling of nested elements (e.g. accordeon)
+
+
+/* styling of the container */
+body {
+    //#en#.ilc_section_CardOutlined,
+    .ilc_section_KarteUmrandet,
+        // legacy
+    .ilc_section_TopicListTile,
+    .ilc_section_TopicListContainer,
+    .ilc_section_TopicListContainer2,
+    .ilc_section_TopicListContainerImage,
+    .ilc_section_TopicListContainerImage2,
+    .ilc_section_TopicListContainerImage3 {
+        .border-radius();
+        overflow: hidden; // so border radius cuts into images
+        background-color: @content-card-bg-color;
+        border: @border;
+        margin-bottom: @spacing-small !important; // needs important to override last child margin exception
+        width: 100%;
+    }
+
+    //#en#.ilc_section_CardDropShadow,
+    .ilc_section_KarteSchlagschatten,
+        // legacy classes
+    .ilc_section_TopicListContainer2 {
+        .border-radius();
+        overflow: hidden; // so border radius cuts into images
+        width: 100%;
+        background-color: @content-card-bg-color;
+        margin-bottom: @spacing-small !important; // needs important to override last child margin exception
+        border: @border;
+        box-shadow: 3px 4px 16px 0px rgba(0, 0, 0, 0.15);
+        transition: all .2s ease;
+    }
+
+    // counteract overflow hidden in page editor mode, so dropdown menus don't get cut off
+    .il_editarea {
+        .ilc_section_KarteUmrandet,
+        .ilc_section_KarteSchlagschatten {
+            overflow: visible;
+        }
+    }
+
+    //#en#.ilc_section_CardSemiTransparent,
+    .ilc_section_KarteHalbtransparent {
+        width: 100%;
+        background-color: fade(@global-bg-color, 90%);
+    }
+
+    //#en#.ilc_section_ColumnSpaceBetweenBlocks,
+    .ilc_section_SpalteBlockZwischenabstand,
+        // legacy styles
+    .ilc_section_TopicListContainer2 {
+        width: 100%;
+        height: 100%;
+        display: flex !important; // overrides inline style of <a> tag linked tiles
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        // there is a hover only when <a> - see differences section
+        // padded blocks take 100% height and therefor begin right under previous block
+    }
+
+    //#en#.ilc_section_FullHeight,
+    .ilc_section_VolleHoehe {
+        width: 100%;
+        display: flex;
+        flex-grow: 1;
+        margin: 0;
+        > div:not([class]):only-child { // so owl carousel has margin when inside full height
+            margin-bottom: @spacing-small;
+        }
+        &.ilc_section_BildVolleHoehe {
+            overflow: hidden;
+            figure,
+            .ilc_Mob,
+            img {
+                height: 100%;
+                width: auto !important;
+            }
+        }
+    }
+    // TMS-7150
+    .ilc_section_BildVolleHoehe {
+        &:extend(body .ilc_section_VolleHoehe);
+        overflow: hidden;
+        img {
+            height: 100%;
+            width: auto !important;
+        }
+    }
+
+    //#en#.ilc_section_CardHoverEffect,
+    .ilc_section_KarteHovereffekt,
+        // legacy classes
+    .ilc_section_TopicListTile {
+        border-radius: 0;
+        width: 100%;
+        box-shadow: inset 0 0 0.1px @content-card-bg-hover-color; // removes flicker from hover effect
+
+        &:hover {
+            box-shadow: inset 800px 0 0 @content-card-bg-hover-color;
+            color: inherit;
+            text-decoration: none;
+            transition: all .7s;
+        }
+
+        &:hover .ilc_text_block_CardLinkArrow:after,
+        &:hover .ilc_text_block_KarteLinkPfeil:after,
+            // legacy class name
+        &:hover .ilc_text_block_TopicListText:after {
+            // hover effect on arrow before element
+            transition: 0.5s;
+            transform: translate((@spacing-small/2), 0);
+        }
+    }
+
+    /**********************************
+    //#en#.ilc_section_CardColored1,
+    .ilc_section_KarteFarbe1,
+        //#en#.ilc_section_CardColored2,
+    .ilc_section_KarteFarbe2,
+        //#en#.ilc_section_CardColored3,
+    .ilc_section_KarteFarbe3,
+        //#en#.ilc_section_CardColored4,
+    .ilc_section_KarteFarbe4,
+        //#en#.ilc_section_CardColored5,
+    .ilc_section_KarteFarbe5,
+        //#en#.ilc_section_CardColored6,
+    .ilc_section_KarteFarbe6,
+        //#en#.ilc_section_CardColored7,
+    .ilc_section_KarteFarbe7,
+        //#en#.ilc_section_CardColored8,
+    .ilc_section_KarteFarbe8,
+        //#en#.ilc_section_CardColored9,
+    .ilc_section_KarteFarbe9,
+    ***********************************/
+
+    [class*="KarteFarbe"] {
+        .border-radius();
+        margin-bottom: @spacing-small !important; // needs important to override last child margin exception
+        width: 100%;
+        height: 100%; // needed so it takes full height inside other cards
+    }
+
+    td.ilc_table_cell_Cell1, th.ilc_table_cell_Cell1,
+    td.ilc_table_cell_Cell2, th.ilc_table_cell_Cell2,
+    td.ilc_table_cell_Cell3, th.ilc_table_cell_Cell3,
+    td.ilc_table_cell_Cell4, th.ilc_table_cell_Cell4 {
+        border-color: @text-color !important;
+    }
+
+    //#en#.ilc_section_CardColored1,
+    .ilc_section_KarteFarbe1,
+    td.ilc_table_cell_Cell1,
+    th.ilc_table_cell_Cell1 {
+        background: @content-card-color-1;
+    }
+    .ilc_section_CardColored2,
+    .ilc_section_KarteFarbe2,
+    td.ilc_table_cell_Cell2, th.ilc_table_cell_Cell2 {
+        background: @content-card-color-2;
+    }
+    //#en#.ilc_section_CardColored3,
+    .ilc_section_KarteFarbe3,
+    td.ilc_table_cell_Cell3,
+    th.ilc_table_cell_Cell3 {
+        background: @content-card-color-3;
+    }
+    //#en#.ilc_section_CardColored4,
+    .ilc_section_KarteFarbe4,
+    td.ilc_table_cell_Cell4,
+    th.ilc_table_cell_Cell4 {
+        background: @content-card-color-4;
+    }
+    //#en#.ilc_section_CardColored5,
+    .ilc_section_KarteFarbe5 {
+        background: @content-card-color-5;
+    }
+    //#en#.ilc_section_CardColored6,
+    .ilc_section_KarteFarbe6 {
+        background: @content-card-color-6;
+    }
+    //#en#.ilc_section_CardColored7,
+    .ilc_section_KarteFarbe7 {
+        background: @content-card-color-7;
+    }
+    //#en#.ilc_section_CardColored8,
+    .ilc_section_KarteFarbe8 {
+        background: @content-card-color-8;
+    }
+    //#en#.ilc_section_CardColored9,
+    .ilc_section_KarteFarbe9 {
+        background: @content-card-color-9;
+    }
+
+
+    // decoration to be attached above and below box
+    .ilc_section_KarteRandDeko01 {
+        background: transparent;
+        overflow: hidden;
+        height: 0;
+        padding-bottom: 8.748%;
+        width: 100%;
+        position: relative;
+        margin-bottom: 0;
+        > [class*="KarteFarbe"] {
+            top: 100%;
+            height: 0px;
+            position: absolute;
+            padding-bottom: 8.748%;
+            width: 100%;
+            transform: skewY(-5deg);
+            transform-origin: top left;
+            border-radius: 0;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+    }
+
+    [class*="KarteFarbe"] + .ilc_section_KarteRandDeko01 > [class*="KarteFarbe"] {
+        top: auto;
+    }
+
+    .ilc_section_KarteRandDeko01 + [class*="KarteFarbe"] {
+        margin-top: 0;
+        border-radius: 0;
+    }
+
+    [class*="KarteFarbe"] + .ilc_section_KarteRandDeko01 {
+        margin-bottom: 0;
+        margin-top: -@spacing-small; // getting rid of margin-bottom so deco is right below card
+    }
+
+    // for inverted text styling see tms.less
+    // so it doesn't effect customer skins that don't need inverted text
+
+    //#en#.ilc_text_block_CardLinkArrow,
+    .ilc_text_block_KarteLinkPfeil,
+        // legacy classes
+    .ilc_text_block_TopicListText {
+        color: @text-color; // specific variable?
+        min-height: @content-card-link-bar-min-height;
+        padding: @spacing-xsmall (@spacing-medium/2) @spacing-xsmall @spacing-medium;
+        font-size: 1rem;
+        font-weight: @font-weight-text;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-decoration: none;
+        &:hover {
+            // removing link deco so it doesn't show up on CardLinkArrow
+            color: @text-color; // specific variable?
+            text-decoration: none;
+        }
+        &:after {
+            content: "\e907";
+            font-family: "cat icons";
+            font-size: 1.2rem;
+            transition: 0.5s;
+        }
+    }
+}
+
+.catmix_invert-text-color() {
+    color: @text-color-white;
+    &:hover {
+        color: @text-color-white;
+    }
+    /*
+    .ilc_text_block_Standard,
+    .ilc_heading1_Headline1,
+    .ilc_text_block_Headline1,
+    .ilc_heading2_Headline2,
+    .ilc_text_block_Headline2,
+    .ilc_heading3_Headline3,
+    .ilc_text_block_Headline3,
+        //#en#.ilc_text_block_SmallText,
+    .ilc_text_block_KleinerText
+    */
+    [class*="text_block"]:not(.ilc_text_block_KarteLinkPfeil), // KarteLink has white BG even on inverted cards
+    [class*="heading"] {
+        color: @text-color-white;
+    }
+
+    // needs :not to match specificity as :not was used earlier
+    :not([class*="Knopf"]) > a.ilc_link_ExtLink,
+    :not([class*="Knopf"]) > a.ilc_link_IntLink {
+        color: @text-color-white;
+        &:hover {
+            color: @text-color-white;
+        }
+    }
+
+    [class*="Knopf"],
+    [class*="KnopfStandard"],
+    [class*="KnopfSekundaerfarbe"]{
+        .btn-inverted();
+        a.ilc_link_ExtLink,
+        a.ilc_link_IntLink {
+            color: @text-color-white;
+        }
+        &:hover {
+            a.ilc_link_ExtLink,
+            a.ilc_link_IntLink {
+                color: @text-color;
+                &:hover {
+                    color: @text-color;
+                }
+            }
+        }
+
+    }
+    /*
+    //#en#span.ilc_text_inline_ContentButtonDefaultSmall,
+    /*
+    span.ilc_text_inline_KnopfStandardKlein,
+        //#en#span.ilc_text_inline_ContentButtonDefaultBig,
+    span.ilc_text_inline_KnopfStandardGross,
+        //#en#span.ilc_text_inline_ContentButton,
+    span.ilc_text_inline_KnopfKlein,
+        //#en#span.ilc_text_inline_ContentButtonBig,
+    span.ilc_text_inline_KnopfGross,
+        //#en#span.ilc_text_inline_ContentButtonSecondaryBig,
+    span.ilc_text_inline_KnopfSekundaerfarbeGross,
+        //#en#span.ilc_text_inline_ContentButtonSecondarySmall,
+    span.ilc_text_inline_KnopfSekundaerfarbeKlein
+    */
+    [class*="Knopf"],
+    [class*="KnopfStandard"],
+    [class*="KnopfSekundaerfarbe"]{
+        .btn-inverted();
+    }
+    //#en#> .ilc_section_CardHoverEffect,
+    > .ilc_section_KarteHovereffekt,
+        //#en#> .ilc_section_ColumnSpaceBetweenBlocks > .ilc_section_CardHoverEffect
+    > .ilc_section_SpalteBlockZwischenabstand > .ilc_section_KarteHovereffekt {
+        color: @text-color-white;
+    }
+}
+
+/* differences between div and a blocks */
+body a.ilc_section_TopicListContainer2:hover,
+body a.ilc_section_CardDropShadow:hover,
+body a.ilc_section_KarteSchlagschatten:hover {
+    text-decoration: none;
+    box-shadow: 0px 0px 16px 0px fade(@base-color-1, 40%);
+    transition: all .2s ease;
+}
+
+
+/* Elements nested inside any general card
+- Links inside cards
+- Images
+- Accordeons
+- ContentButton
+*/
+body {
+    /*
+    //#en#.ilc_section_CardOutlined,
+    .ilc_section_KarteUmrandet,
+        //#en#.ilc_section_CardHoverEffect,
+    .ilc_section_KarteHovereffekt,
+        //#en#.ilc_section_CardDropShadow,
+    .ilc_section_KarteSchlagschatten,
+        //#en#.ilc_section_CardColored1,
+    .ilc_section_KarteFarbe1,
+        //#en#.ilc_section_CardColored2,
+    .ilc_section_KarteFarbe2,
+        //#en#.ilc_section_CardColored3,
+    .ilc_section_KarteFarbe3,
+        //#en#.ilc_section_CardColored4,
+    .ilc_section_KarteFarbe4,
+        //#en#.ilc_section_CardColored5,
+    .ilc_section_KarteFarbe5,
+        //#en#.ilc_section_CardColored6,
+    .ilc_section_KarteFarbe6,
+        //#en#.ilc_section_CardColored7,
+    .ilc_section_KarteFarbe7,
+        //#en#.ilc_section_CardColored8,
+    .ilc_section_KarteFarbe8,
+        //#en#.ilc_section_CardColored9,
+    .ilc_section_KarteFarbe9,
+    */
+    [class*="Karte"],
+        //#en#.ilc_section_ImageLinkCardGradientBottomText,
+    .ilc_section_BildLinkKarteVerlaufTextUnten,
+        //#en#.ilc_section_ImageLinkCardOverlayCenteredText,
+    .ilc_section_BildLinkKarteOverlayTextMittig,
+        // legacy classes
+        /*
+        .ilc_section_TopicListTile,
+        .ilc_section_TopicListContainer,
+        .ilc_section_TopicListContainer2,
+        .ilc_section_TopicListContainerImage,
+        .ilc_section_TopicListContainerImage2,
+        .ilc_section_TopicListContainerImage3,
+        */
+    [class*="TopicList"]{
+        &:hover {
+            // removing link deco so it doesn't show up on CardLinkArrow
+            color: @text-color; // otherwise normal text will go to hover
+            text-decoration: none;
+        }
+
+        // adding content link styling back on normal links within a boxed paragraph
+        // not sure if this is still needed
+        // needs to exclude Content Style Buttons because this would give them Link Color
+        :not([class*="Knopf"]) > a.ilc_link_ExtLink,
+        :not([class*="Knopf"]) > a.ilc_link_IntLink {
+            color: @content-link-color;
+            text-decoration: @content-link-text-decoration;
+            &:hover {
+                color: @content-link-hover-color;
+                text-decoration: @content-link-hover-text-decoration;
+            }
+        }
+
+        // images stretch to full box width
+        > div > figure.ilc_media_cont_MediaContainer,
+        > .ilc_section_SpalteBlockZwischenabstand > div > figure.ilc_media_cont_MediaContainer {
+            display: block !important; // override display: table inline style which prevented full-width
+            width: 100%;
+            margin: 0;
+            border: 0;
+        }
+        // nested hover items
+        //
+        //#en#.ilc_section_CardHoverEffect,
+        .ilc_section_KarteHovereffekt,
+            // legacy
+        .ilc_section_TopicListTile {
+            margin: 0;
+        }
+        .ilc_section_TopicListTile {
+            border: none;
+        }
+        .ilc_section_BildMitTextspalten {
+            margin: 0;
+        }
+
+        // nested cards
+        //
+        //#en#> .ilc_section_CardColored1,
+        > [class*="KarteFarbe"],
+        > .ilc_section_BildMitTextspalten {
+            // remove margin when card is inside a card
+            // this is more specific than the other important rules for cards that counteract the last child margin exception
+            margin: 0 !important;
+        }
+
+        // accordeons inside cards
+        .ilc_va_cntr_VAccordCntr {
+            margin: 0;
+        }
+        .ilc_va_ihead_VAccordIHead {
+            padding: @spacing-xsmall @spacing-medium @spacing-xsmall @spacing-medium;
+            font-size: 1rem;
+            font-weight: @font-weight-text;
+
+            color: @content-card-text-color;
+            // accordeon head as high as TopicListText and center text
+            min-height: @content-card-link-bar-min-height;
+            display: flex;
+            align-items: center;
+            // making room for arrow on the right
+
+            .ilc_va_ihead_VAccordIHeadCap {
+                display: flex;
+                flex-flow: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+                &:before {
+                    color: @content-card-text-color;
+                    width: auto;
+                    padding-left: 5px;
+                    margin-right: 0;
+                }
+            }
+        }
+
+        // content level 2
+        .ilc_va_icont_VAccordICont {
+            padding: 0;
+            background-color: @content-card-accord-level1-content-bg-color;
+        }
+
+        // acordeon head on level 1 expaneded takes color of level 2
+        .ilc_va_iheada_VAccordIHeadActive {
+            font-weight: @font-weight-text-selected;
+            color: @content-card-accord-head-text-active-color;
+            // background-color: @global-bg-color;
+            .ilc_va_ihead_VAccordIHeadCap {
+                &:before {
+                    color: @content-card-accord-head-text-active-color;
+                }
+            }
+        }
+
+        .ilc_va_icont_VAccordICont {
+            .ilc_va_ihead_VAccordIHead {
+                min-height: @content-card-link-bar-min-height;
+            }
+            // acordeon head on level 2 expaneded
+            .ilc_va_iheada_VAccordIHeadActive {
+                font-weight: @font-weight-text-selected;
+                border-left: 2px solid @base-color-1;
+                background-color: @content-card-accord-level2-content-bg-color;
+            }
+        }
+
+        // tab content level 3
+        .ilc_va_icont_VAccordICont .ilc_va_icont_VAccordICont {
+            background-color: @content-card-accord-level2-content-bg-color;
+            border-left: 2px solid @base-color-1;
+            .ilc_va_ihead_VAccordIHead {
+                font-size: 1rem;
+            }
+            // acordeon head on level 3 expaneded takes color of level 4
+            .ilc_va_iheada_VAccordIHeadActive {
+                border: none;
+                background-color: @content-card-accord-level3-content-bg-color;
+            }
+        }
+
+        // tab content level 4
+        .ilc_va_icont_VAccordICont .ilc_va_icont_VAccordICont .ilc_va_icont_VAccordICont {
+            border: none;
+            background-color: @content-card-accord-level3-content-bg-color;
+            .ilc_va_ihead_VAccordIHeadCap {
+                flex-flow: row;
+                justify-content: flex-start;
+                &:before {
+                    padding-right: 0.8rem;
+                }
+            }
+            .ilc_section_TopicListTile .ilc_text_block_TopicListText {
+                flex-flow: row-reverse;
+                justify-content: flex-end;
+                &:after {
+                    padding-right: 0.7rem;
+                }
+            }
+        }
+
+        // tab content level 5
+        .ilc_va_icont_VAccordICont .ilc_va_icont_VAccordICont .ilc_va_icont_VAccordICont {
+            .ilc_va_iheada_VAccordIHeadActive {
+                border: none;
+                background-color: transparent;
+            }
+            .ilc_va_icont_VAccordICont {
+                border-left: none;
+            }
+        }
+
+        // tab content level 6
+        .ilc_va_icont_VAccordICont .ilc_va_icont_VAccordICont .ilc_va_icont_VAccordICont .ilc_va_icont_VAccordICont {
+            .ilc_section_TopicListTile,
+            .ilc_va_icntr_VAccordIHead {
+                padding-left: 0.5rem;
+            }
+        }
+        // end of accordeons inside cards
+    }
+}
+
+/*
+* Image link cards with text
+*/
+
+// move text over image
+body {
+    //#en#.ilc_section_ImageLinkCardGradientBottomText,
+    .ilc_section_BildLinkKarteVerlaufTextUnten,
+        //#en#.ilc_section_ImageLinkCardOverlayCenteredText,
+    .ilc_section_BildLinkKarteOverlayTextMittig,
+        // legacy
+        /*
+        .ilc_section_TopicListContainerImage,
+        .ilc_section_TopicListContainerImage2,
+        .ilc_section_TopicListContainerImage3
+        */
+    [class*="TopicListContainerImage"] {
+        margin-bottom: @spacing-medium !important; // needs important to override last child margin exception
+        position: relative;
+        border: @border;
+        .border-radius();
+        overflow: hidden; // so border radius cuts into image
+        .ilc_section_Overlay,
+        .ilc_section_Ueberlagerung,
+            // legacy class name
+        .ilc_section_TopicListTile {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            margin: 0;
+            border: 0;
+            // legacy section start
+            &:hover {
+                box-shadow: none;
+            }
+            // legacy section end
+            div.ilc_text_block_CardLinkArrow,
+            div.ilc_text_block_KarteLinkPfeil,
+                // legacy class name
+            div.ilc_text_block_TopicListText {
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+            }
+        }
+        &:hover .ilc_section_TopicListTile .ilc_text_block_TopicListText,
+            //#en#&:hover .ilc_section_Overlay .ilc_text_block_CardLinkArrow,
+        &:hover .ilc_section_Ueberlagerung .ilc_text_block_KarteLinkPfeil {
+            transition: 0.5s;
+            &:after {
+                // hover effect on arrow after element for image tiles
+                transform: translate((@spacing-small/2), 0);
+                transition: 0.5s;
+            }
+        }
+    }
+}
+
+// style 1 - gradient at bottom
+body {
+    //#en#.ilc_section_ImageLinkCardGradientBottomText,
+    .ilc_section_BildLinkKarteVerlaufTextUnten,
+        // legacy class
+    .ilc_section_TopicListContainerImage {
+        .ilc_section_Overlay,
+        .ilc_section_Ueberlagerung,
+            // legacy class name
+        .ilc_section_TopicListTile {
+            box-shadow: none;
+            height: auto;
+
+            //#en#.ilc_text_block_CardLinkArrow,
+            .ilc_text_block_KarteLinkPfeil,
+            .ilc_text_block_TopicListText,
+                // legacy class name
+            .ilc_text_block_TopicListText {
+                min-height: 88px; // so two lines fit next to the arrow
+                padding: 40px 5px 6px 10px;
+                transition: 0.5s;
+                color: @content-card-gradient-text-color;
+                background: @content-card-gradient-bg-color;
+                background: -moz-linear-gradient(0deg, fade(@content-card-gradient-bg-color, 95%) 0%, fade(@content-card-gradient-bg-color, 0%) 100%);
+                background: -webkit-linear-gradient(0deg, fade(@content-card-gradient-bg-color, 95%) 0%, fade(@content-card-gradient-bg-color, 0%) 100%);
+                background: linear-gradient(0deg, fade(@content-card-gradient-bg-color, 95%) 0%, fade(@content-card-gradient-bg-color, 0%) 100%);
+            }
+        }
+        //#en#&:hover .ilc_section_Overlay .ilc_text_block_CardLinkArrow,
+        &:hover .ilc_section_Ueberlagerung .ilc_text_block_KarteLinkPfeil,
+            // legacy class
+        &:hover .ilc_section_TopicListTile .ilc_text_block_TopicListText {
+            padding: 60px 5px 6px 10px;
+            min-height: 108px;
+        }
+    }
+}
+
+// style 2 - full color tile text in center
+body {
+    //#en#.ilc_section_ImageLinkCardOverlayCenteredText,
+    .ilc_section_BildLinkKarteOverlayTextMittig,
+        // legacy class name
+    .ilc_section_TopicListContainerImage2 {
+        .ilc_section_Overlay,
+        .ilc_section_Ueberlagerung,
+            // legacy class name
+        .ilc_section_TopicListTile {
+            height: 100%;
+
+            div.ilc_text_block_CardLinkArrow,
+            div.ilc_text_block_KarteLinkPfeil,
+            div.ilc_text_block_TopicListText {
+                justify-content: center;
+                text-align: center;
+                padding: 10px;
+                background: @content-card-colored-tile-bg;
+                height: 100%;
+                color: @content-card-colored-tile-text;
+
+                &:hover {
+                    transition: .5s ease;
+                    font-size: 1.4em;
+                }
+
+                // hides arrow in this style
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+/*
+========================================================
+start tile cover image header
+========================================================
+*/
+
+body {
+    //#en#.ilc_section_ImageWithTextOverlay,
+    .ilc_section_BildMitTextspalten,
+        // legacy class names
+    .ilc_section_StartTileContainer,
+    .ilc_section_StartTileContainer2 {
+        position:  relative;
+        margin-bottom: @spacing-medium !important; // needs important to override last child margin exception
+        .border-radius();
+        overflow: hidden;
+
+        div > figure.ilc_media_cont_MediaContainer {
+            overflow: hidden; // so border radius cuts into images
+            display: block !important; // override display: table inline style
+            border: 0;
+            margin: 0px;
+            width: 100%;
+        }
+
+        //#en#.ilc_section_OverlayFullHeight,
+        .ilc_section_UeberlagerungVolleHoehe,
+            //#en#.ilc_section_Overlay,
+        .ilc_section_Ueberlagerung {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            position: absolute;
+            bottom: 0;
+            .row {
+                flex-grow: 1;
+            }
+            // no margins in overlays
+            .row,
+            [class*="ilc_section_Karte"] {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        //#en#.ilc_section_Overlay,
+        .ilc_section_Ueberlagerung {
+            //#en#.ilc_section_ContentContainerWide .ilc_section_CardSemiTransparent,
+            .ilc_section_LimitierteBreiteWeit .ilc_section_KarteHalbtransparent {
+                .border-radius();
+                overflow: hidden; // so border radius cuts into images
+            }
+        }
+
+        //#en#.ilc_section_OverlayFullHeight,
+        .ilc_section_UeberlagerungVolleHoehe {
+            height: 100%;
+            padding: 0;
+            .row {
+                height: 100%;
+                flex-grow: 1;
+                div[class*='col-'] {
+                    height: 100%;
+                    div[class*="ilc_section_Card"],
+                    div[class*="ilc_section_Karte"] {
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// responsive
+
+// up to 991px when slate open: 2-col to 1-col
+@media only screen and (max-width: @screen-lg) {
+    .il-layout-page.with-mainbar-slates-engaged {
+        //#en#.ilc_section_ImageWithTextOverlay,
+        .ilc_section_BildMitTextspalten,
+            // legacy class names
+        .ilc_section_StartTileContainer,
+        .ilc_section_StartTileContainer2 {
+
+            figure.ilc_media_cont_MediaContainer {
+                margin-bottom: 10px;
+            }
+
+            //#en#.ilc_section_OverlayFullHeight,
+            .ilc_section_UeberlagerungVolleHoehe,
+                //#en#.ilc_section_Overlay,
+            .ilc_section_Ueberlagerung {
+                display: block;
+                position: relative;
+                width: 100%;
+                left: auto;
+                right: auto;
+                bottom: auto;
+                background-color: transparent;
+                .row [class*="col-"] {
+                    .make-sm-column(12);
+                    .make-md-column(12);
+                }
+                // very specific so it only counteracts first padding block
+                //#en#.ilc_section_CardSemiTransparent > .ilc_section_PaddingSmall,
+                .ilc_section_KarteHalbtransparent > .ilc_section_InnenabstandKlein,
+                    //#en#.ilc_section_CardSemiTransparent > .ilc_section_PaddingMedium,
+                .ilc_section_KarteHalbtransparent > .ilc_section_InnenabstandMittel,
+                    //#en#.ilc_section_CardSemiTransparent > .ilc_section_PaddingGross,
+                .ilc_section_KarteHalbtransparent > .ilc_section_InnenabstandLarge {
+                    padding: 0;
+                    margin-top: @spacing-small;
+                }
+            }
+        }
+    }
+}
+
+
+// up to 768px when slate open and closed: 2-col to 1-col
+@media only screen and (max-width: @screen-sm-max) {
+    body {
+        //#en#.ilc_section_ImageWithTextOverlay,
+        .ilc_section_BildMitTextspalten,
+            // legacy class names
+        .ilc_section_StartTileContainer,
+        .ilc_section_StartTileContainer2 {
+
+            figure.ilc_media_cont_MediaContainer {
+                margin-bottom: 10px;
+            }
+
+            //#en#.ilc_section_OverlayFullHeight,
+            .ilc_section_UeberlagerungVolleHoehe,
+                //#en#.ilc_section_Overlay,
+            .ilc_section_Ueberlagerung {
+                display: block;
+                position: relative;
+                width: 100%;
+                left: auto;
+                right: auto;
+                bottom: auto;
+                background-color: transparent;
+                // very specific so it only counteracts first padding block
+                //#en#.ilc_section_CardSemiTransparent > .ilc_section_PaddingSmall,
+                .ilc_section_KarteHalbtransparent > .ilc_section_InnenabstandKlein,
+                    //#en#.ilc_section_CardSemiTransparent > .ilc_section_PaddingMedium,
+                .ilc_section_KarteHalbtransparent > .ilc_section_InnenabstandMittel,
+                    //#en#.ilc_section_CardSemiTransparent > .ilc_section_PaddingGross,
+                .ilc_section_KarteHalbtransparent > .ilc_section_InnenabstandLarge {
+                    padding: 0;
+                    margin-top: @spacing-small;
+                }
+            }
+        }
+    }
+}
+
+/*
+* special styling when nested inside a card
+*/
+
+/*************************************
+//#en#.ilc_section_CardOutlined,
+.ilc_section_KarteUmrandet,
+	//#en#.ilc_section_CardHoverEffect,
+.ilc_section_KarteHovereffekt,
+	//#en#.ilc_section_CardDropShadow,
+.ilc_section_KarteSchlagschatten,
+	//#en#.ilc_section_CardColored1,
+.ilc_section_KarteFarbe1,
+	//#en#.ilc_section_CardColored2,
+.ilc_section_KarteFarbe2,
+	//#en#.ilc_section_CardColored3,
+.ilc_section_KarteFarbe3,
+	//#en#.ilc_section_CardColored4,
+.ilc_section_KarteFarbe4,
+	//#en#.ilc_section_CardColored5,
+.ilc_section_KarteFarbe5,
+	//#en#.ilc_section_CardColored6,
+.ilc_section_KarteFarbe6,
+	//#en#.ilc_section_CardColored7,
+.ilc_section_KarteFarbe7,
+	//#en#.ilc_section_CardColored8,
+.ilc_section_KarteFarbe8,
+	//#en#.ilc_section_CardColored9,
+.ilc_section_KarteFarbe9
+************************************/
+[class*="Karte"] {
+    //#en#.ilc_section_ImageWithTextOverlay,
+    .ilc_section_BildMitTextspalten,
+        // legacy class names
+    .ilc_section_StartTileContainer,
+    .ilc_section_StartTileContainer2 {
+        border-radius: 0;
+    }
+}
+
+// responsive when nested inside a card
+
+// up to 991px when slate open: 2-col to 1-col
+@media only screen and (max-width: @screen-lg) {
+    .il-layout-page.with-mainbar-slates-engaged {
+        /**************************************
+        //#en#.ilc_section_CardOutlined,
+        .ilc_section_KarteUmrandet,
+            //#en#.ilc_section_CardHoverEffect,
+        .ilc_section_KarteHovereffekt,
+            //#en#.ilc_section_CardDropShadow,
+        .ilc_section_KarteSchlagschatten,
+            //#en#.ilc_section_CardColored1,
+        .ilc_section_KarteFarbe1,
+            //#en#.ilc_section_CardColored2,
+        .ilc_section_KarteFarbe2,
+            //#en#.ilc_section_CardColored3,
+        .ilc_section_KarteFarbe3,
+            //#en#.ilc_section_CardColored4,
+        .ilc_section_KarteFarbe4,
+            //#en#.ilc_section_CardColored5,
+        .ilc_section_KarteFarbe5,
+            //#en#.ilc_section_CardColored6,
+        .ilc_section_KarteFarbe6,
+            //#en#.ilc_section_CardColored7,
+        .ilc_section_KarteFarbe7,
+            //#en#.ilc_section_CardColored8,
+        .ilc_section_KarteFarbe8,
+            //#en#.ilc_section_CardColored9,
+        .ilc_section_KarteFarbe9
+        ***********************************/
+        [class*="Karte"] {
+            //#en#.ilc_section_ImageWithTextOverlay,
+            .ilc_section_BildMitTextspalten,
+                // legacy class names
+            .ilc_section_StartTileContainer,
+            .ilc_section_StartTileContainer2 {
+                // very specific so it adds padding that was removed for cover images outside cards
+                //
+                //#en#.ilc_section_CardSemiTransparent > .ilc_section_PaddingSmall,
+                .ilc_section_KarteHalbtransparent > .ilc_section_InnenabstandKlein {
+                    padding: @spacing-small;
+                    padding-top: 0;
+                }
+                //#en#.ilc_section_CardSemiTransparent > .ilc_section_PaddingMedium,
+                .ilc_section_KarteHalbtransparent > .ilc_section_InnenabstandMittel {
+                    .cat-padding-medium();
+                    padding-top: 0;
+                }
+                //#en#.ilc_section_CardSemiTransparent > .ilc_section_PaddingLarge,
+                .ilc_section_KarteHalbtransparent > .ilc_section_InnenabstandGross {
+                    padding: @spacing-large;
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+}
+
+
+// up to 768px when slate open and closed: 2-col to 1-col
+@media only screen and (max-width: @screen-sm-max) {
+    body {
+        /*************************************
+        //#en#.ilc_section_CardOutlined,
+        .ilc_section_KarteUmrandet,
+            //#en#.ilc_section_CardHoverEffect,
+        .ilc_section_KarteHovereffekt,
+            //#en#.ilc_section_CardDropShadow,
+        .ilc_section_KarteSchlagschatten,
+            //#en#.ilc_section_CardColored1,
+        .ilc_section_KarteFarbe1,
+            //#en#.ilc_section_CardColored2,
+        .ilc_section_KarteFarbe2,
+            //#en#.ilc_section_CardColored3,
+        .ilc_section_KarteFarbe3,
+            //#en#.ilc_section_CardColored4,
+        .ilc_section_KarteFarbe4,
+            //#en#.ilc_section_CardColored5,
+        .ilc_section_KarteFarbe5,
+            //#en#.ilc_section_CardColored6,
+        .ilc_section_KarteFarbe6,
+            //#en#.ilc_section_CardColored7,
+        .ilc_section_KarteFarbe7,
+            //#en#.ilc_section_CardColored8,
+        .ilc_section_KarteFarbe8,
+            //#en#.ilc_section_CardColored9,
+        .ilc_section_KarteFarbe9
+        ***********************************/
+        [class*="Karte"] {
+            //#en#.ilc_section_ImageWithTextOverlay,
+            .ilc_section_BildMitTextspalten,
+                // legacy class names
+            .ilc_section_StartTileContainer,
+            .ilc_section_StartTileContainer2 {
+                // very specific so it adds padding that was removed for cover images outside cards
+                //
+                //#en#.ilc_section_CardSemiTransparent > .ilc_section_PaddingSmall,
+                .ilc_section_KarteHalbtransparent > .ilc_section_InnenabstandKlein {
+                    padding: @spacing-small;
+                    padding-top: 0;
+                }
+                //#en#.ilc_section_CardSemiTransparent > .ilc_section_PaddingMedium,
+                .ilc_section_KarteHalbtransparent > .ilc_section_InnenabstandMittel {
+                    .cat-padding-medium();
+                    padding-top: 0;
+                }
+                //#en#.ilc_section_CardSemiTransparent > .ilc_section_PaddingLarge,
+                .ilc_section_KarteHalbtransparent > .ilc_section_InnenabstandGross {
+                    padding: @spacing-large;
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+}
+
+/* For Login screen */
+
+body .ilStartupSectionPageEditor .ilc_section_LoginBannerBreitUnterHeader {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin: 0 -50vw @spacing-medium -50vw;
+    .ilc_section_BildMitTextspalten {
+        border-radius: 0;
+    }
+    .ilc_section_BildMitTextspalten > div > .ilc_media_cont_MediaContainer > .ilc_Mob img {
+        width: 100%;
+    }
+}
+// see DVAG skin how to build narrow cover image with fixed height
+
+// *****************************************
+// testing impact page editor content
+// e.g. equal height in cards
+// *****************************************
+
+body .ilCOPageGrid {
+    div[class*=" col-"] {
+        display: flex;
+        flex-direction: column;
+        // TMS-7995: content in cols shouldn't take 100% width
+        &.il_InfoScreenPropertyValue .btn {
+            align-self: flex-start;
+        }
+    }
+}
+
+// #3662 remove empty cols and move up following cols
+body .ilc_section_Strukturelement div[class*=" col-"]:empty {
+    display: none;
+}
+
+/* Elementbar */
+
+@elementbar-gutter-width: 8px;
+
+body {
+    .ilc_section_Elementeleiste {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        // TMS-7086 wrapping only on small screens for multiline headlines was no longer needed!
+        flex-wrap: wrap;
+        // good old bootstrap method to get row gutter inside but not on outer ends:
+        margin-right: floor((@elementbar-gutter-width / -2));
+        margin-left: ceil((@elementbar-gutter-width / -2));
+
+        // remove whatever margin blocks bring as baseline default
+        > *,
+            // counteracting last child having margin-bottom removed by margin system
+        > *[class*="ilc_Paragraph"]:last-child,
+        > *[class*="ilc_section"]:last-child,
+        > .ilPageTagSearch:last-child,
+        > .cat-search-wrapper:last-child {
+            margin: 0;
+            margin-bottom: @spacing-small;
+        }
+        > .ilc_text_block_Standard > *[class*="ilc_text_inline_Knopf"],
+        > div > *[class*="ilc_media_cont"] {
+            margin: 0;
+        }
+
+        // add a standard gutter padding
+        > *[class*="ilc_section"],
+        > *[class*="ilc_link"],
+        > *[class*="ilc_Paragraph"],
+        > div > *[class*="ilc_media_cont"],
+        > .cat-search-wrapper,
+        > .cat-ext-search-wrapper,
+        > .ilPageTagSearch .form-group.row {
+            // good old bootstrap method to get gutter between elements
+            padding-right: floor((@elementbar-gutter-width / 2));
+            padding-left: ceil((@elementbar-gutter-width / 2));
+        }
+
+        // modifying specific blocks inside elementbar
+
+        // this is a fix for the DVAG content style cards using icons with margin included in the image
+        > div > .ilc_media_cont_MediaContainerOhneAbstand,
+        > div > .ilc_media_cont_MediacontainerOhneAbstand {
+            margin-left: ceil((@elementbar-gutter-width / -2)) !important;
+            margin-right: ceil((@elementbar-gutter-width / -2)) !important;
+            margin-bottom: -0.8rem; // counteract sorrounding div margin
+        }
+        // but still compensate negative row margin on first & last child
+        > div:first-child > .ilc_media_cont_MediaContainerOhneAbstand,
+        > div:first-child > .ilc_media_cont_MediacontainerOhneAbstand {
+            padding-left: ceil((@elementbar-gutter-width / 2));
+        }
+        > div:last-child > .ilc_media_cont_MediaContainerOhneAbstand,
+        > div:last-child > .ilc_media_cont_MediacontainerOhneAbstand {
+            padding-right: floor((@elementbar-gutter-width / 2));
+        }
+
+        // text search
+        .cat-search-wrapper, .ilPageTagSearch .form-group.row {
+            min-width: 450px; // so search bars remain wide enough to be usable
+            // when not wrapped in structure element
+            flex-grow: 1;
+            max-width: 50%;
+        }
+
+        // tag search
+        > .ilPageTagSearch .form-group.row {
+            margin-bottom: 0; // counteract default row margin only when not nested
+        }
+        .ilPageTagSearch .form-group.row {
+            margin-right: floor((@elementbar-gutter-width / -2));
+            margin-left: ceil((@elementbar-gutter-width / -2));
+            // getting rid of empty label column
+            label.col-sm-3 {
+                display: none;
+            }
+            .col-sm-9 {
+                width: 100%;
+                padding-right: floor((@elementbar-gutter-width / 2));
+                padding-left: ceil((@elementbar-gutter-width / 2));
+            }
+        }
+        // TMS-7085 no margin for content-btns in Strukturelement
+        .ilc_section_Strukturelement {
+            /*
+            span.ilc_text_inline_KnopfKlein,
+            span.ilc_text_inline_KnopfGross,
+            span.ilc_text_inline_KnopfSekundaerfarbeKlein,
+            span.ilc_text_inline_KnopfSekundaerfarbeGross,
+            span.ilc_text_inline_KnopfStandardKlein,
+            span.ilc_text_inline_KnopfStandardGross
+            */
+            [class*="Knopf"],
+            [class*="KnopfStandard"],
+            [class*="KnopfSekundaerfarbe"] {
+                margin: 0;
+            }
+        }
+    }
+    .ilc_section_AusrichtenMittig .ilc_section_Elementeleiste {
+        justify-content: center;
+        text-align: left;
+    }
+    .ilc_section_AusrichtenRechts .ilc_section_Elementeleiste {
+        justify-content: flex-end;
+        text-align: left;
+    }
+
+}
+
+/*
+========================================================
+cate custom learning modul styles
+========================================================
+*/
+
+body {
+    /* top & bottom nav box */
+    div.ilc_page_tnav_TopNavigation,
+    div.ilc_page_bnav_BottomNavigation {
+        background-color: transparent;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 1400px;
+    }
+
+    /* left and right nav element */
+    div.ilc_page_lnav_LeftNavigation,
+    div.ilc_page_rnav_RightNavigation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        float: none;
+        width: auto;
+
+        a {
+            .border-radius-small();
+            display: flex;
+            align-items: center;
+            font-weight: 400;
+            justify-content: center;
+            height: 85px;
+            opacity: .6;
+
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: @base-color-1-bg-light;
+                // color: @base-color-1;
+                text-decoration: none;
+                opacity: 1;
+            }
+        }
+
+        img {
+            display: none;
+        }
+    }
+
+    /* left nav icon */
+    div.ilc_page_lnav_LeftNavigation a:before,
+    div.ilc_page_rnav_RightNavigation a:after {
+        content: "\e902";
+        color: @text-color;
+        font-family: 'cat icons';
+        font-size: 4rem;
+    }
+
+    div.ilc_page_rnav_RightNavigation a:after {
+        content: "\e903";
+    }
+
+    div.ilc_page_lnav_LeftNavigation a {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    div.ilc_page_rnav_RightNavigation a {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+// visible progress icon in slate-tree
+.il-maincontrols-slate .jstree.jstree-default#il_expl2_jstree_cont_ilLMProgressTree {
+    .jstree-container-ul {
+        img {
+            display: inline-block;
+        }
+    }
+}
