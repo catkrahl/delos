@@ -3,6 +3,7 @@
 
 ### Patch Marker
 * patches mit '//###_cate-skin-patch' markieren und mehrzeilig mit '//###_patch_end' beenden
+* patches für den ILIAS-Kern mit //###_core-fix markieren
 
 ### Allgemein
 * Änderungen nicht direkt im Code der Module, sondern - falls möglich - in der modul/index.scss
@@ -45,6 +46,7 @@
 ### ???
 * ui_component_mainbar -> mixin in datei oder in mixins?
 * 3 Stellen für typo: settings_typography/normalize_typography/elements_typography
+* tabs hover bg-color in _c-toolbar, nicht in _c-tabs
 
 ### citations:
 "And, if we need, we can always @use and @forward the same module by adding both rules:
@@ -52,3 +54,6 @@
 @use 'forms';
 That’s particularly useful if you want to wrap a library with configuration or any additional tools, before passing it along to your other files."
 (https://css-tricks.com/introducing-sass-modules/)
+
+git subtree push:
+git subtree push --prefix=Customizing/global/skin/cate git@github.com:conceptsandtraining/delos.git cate90

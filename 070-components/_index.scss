@@ -8,40 +8,45 @@
 
 /* UI Framework */
 
-@use "./UI-framework/_ui-component_tooltip.scss";
-@use "./UI-framework/Breadcrumbs/_ui-component_breadcrumbs.scss";
-@use "./UI-framework/Button/_ui-component_button.scss";
-@use "./UI-framework/Button/_ui-component_tag.scss";
-@use "./UI-framework/Button/_ui-component_toggle.scss";
-@use "./UI-framework/Card/_ui-component_card.scss";
-@use "./UI-framework/Chart/_ui-component_chart.scss";
-@use "./UI-framework/Counter/_ui-component_counter.scss";
-@use "./UI-framework/Deck/_ui-component_deck.scss";
-@use "./UI-framework/Divider/_ui-component_divider.scss";
-@use "./UI-framework/Dropdown/_ui-component_dropdown.scss";
-@use "./UI-framework/Dropzone/_ui-component_dropzone.scss";
-@use "./UI-framework/Entity/ui-component_entity";
-@use "./UI-framework/Input/_ui-component_input.scss";
-@use "./UI-framework/Item/_ui-component_item.scss";
-@use "./UI-framework/Launcher/ui-component_launcher";
-@use "./UI-framework/Layout/_ui-component_layout.scss";
-@use "./UI-framework/Link/_ui-component_link.scss";
-@use "./UI-framework/Listing/ui-component_properties";
-@use "./UI-framework/Listing/_ui-component_characteristic_value.scss";
-@use "./UI-framework/Listing/_ui-component_workflow.scss";
-@use "./UI-framework/Listing/_ui-component_entitylisting.scss";
-@use "./UI-framework/MainControls/_ui-component_maincontrols.scss";
-@use "./UI-framework/Menu/_ui-component_menu.scss";
-@use "./UI-framework/MessageBox/_ui-component_messagebox.scss";
-@use "./UI-framework/Modal/_ui-component_modal.scss";
-@use "./UI-framework/Panel/_ui-component_panel.scss";
-@use "./UI-framework/Player/_ui-component_player.scss";
-@use "./UI-framework/Popover/_ui-component_popover.scss";
-@use "./UI-framework/Symbol/_ui-component_symbol.scss";
-@use "./UI-framework/Table/_ui-component_table.scss";
-@use "./UI-framework/Toast/_ui-component_toast.scss";
-@use "./UI-framework/Tree/_ui-component_tree.scss";
-@use "./UI-framework/ViewControl/_ui-component_viewcontrol.scss";
+//###_cate-skin-patch
+@forward "./UI-framework/_ui-component_tooltip.scss";
+@forward "./UI-framework/Breadcrumbs/_ui-component_breadcrumbs.scss";
+@forward "./UI-framework/Button/_ui-component_button.scss";
+@forward "./UI-framework/Button/_ui-component_tag.scss";
+@forward "./UI-framework/Button/_ui-component_toggle.scss";
+@forward "./UI-framework/Card/_ui-component_card.scss";
+@forward "./UI-framework/Chart/_ui-component_chart.scss";
+@forward "./UI-framework/Counter/_ui-component_counter.scss";
+@forward "./UI-framework/Deck/_ui-component_deck.scss";
+@forward "./UI-framework/Divider/_ui-component_divider.scss";
+@forward "./UI-framework/Dropdown/_ui-component_dropdown.scss";
+@forward "./UI-framework/Dropzone/_ui-component_dropzone.scss";
+@forward "./UI-framework/Entity/ui-component_entity";
+@forward "./UI-framework/Input/_ui-component_input.scss";
+@forward "./UI-framework/Item/_ui-component_item.scss";
+@forward "./UI-framework/Launcher/ui-component_launcher";
+@forward "./UI-framework/Layout/_ui-component_layout.scss";
+@forward "./UI-framework/Link/_ui-component_link.scss";
+@forward "./UI-framework/Listing/ui-component_properties";
+@forward "./UI-framework/Listing/_ui-component_characteristic_value.scss";
+@forward "./UI-framework/Listing/_ui-component_workflow.scss";
+@forward "./UI-framework/Listing/_ui-component_entitylisting.scss";
+@forward "./UI-framework/MainControls/_ui-component_maincontrols.scss";
+@forward "./UI-framework/Menu/_ui-component_menu.scss";
+@forward "./UI-framework/MessageBox/_ui-component_messagebox.scss";
+@forward "./UI-framework/Modal/_ui-component_modal.scss";
+@forward "./UI-framework/Panel/_ui-component_panel.scss";
+@forward "./UI-framework/Player/_ui-component_player.scss";
+@forward "./UI-framework/Popover/_ui-component_popover.scss";
+@forward "./UI-framework/Symbol/_ui-component_symbol.scss";
+@forward "./UI-framework/Table/_ui-component_table.scss";
+@forward "./UI-framework/Toast/_ui-component_toast.scss";
+@forward "./UI-framework/Tree/_ui-component_tree.scss";
+@forward "./UI-framework/ViewControl/_ui-component_viewcontrol.scss";
+//###_patch-end
+
+/* cate contentstyles */
+@forward "./contentstyles";
 
 /* Component parts from old delos.scss */
 

@@ -125,7 +125,7 @@ table.calmini {
 	td.calministd > .il_calmini_monthday > a {
 	}
 	td.calminitoday {
-		background-color: $il-warning-color;
+		background-color: $il-highlight-bg; //###_cate-skin-patch
 		> .il_calmini_monthday > a {
 			color: white;
 		}

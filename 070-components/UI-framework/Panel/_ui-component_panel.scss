@@ -24,7 +24,7 @@
 		border-bottom: 1px solid transparent;
 		border: none;
 		@include border-top-radius((ls.$il-panel-border-radius - 1));
-	
+
 		>.dropdown .dropdown-toggle {
 			color: $il-btn-standard-color;
 		}
@@ -41,7 +41,7 @@
 			color: ls.$il-panel-heading-color;
 			font-size: $il-font-size-xlarge;
 			line-height: $il-line-height-large;
-			font-weight: $il-font-weight-bold;
+			font-weight: $il-headings-font-weight; //###_core-fix
 		}
 
 		h4, h4.ilBlockHeader {

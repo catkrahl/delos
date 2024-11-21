@@ -3,26 +3,26 @@
 // cate changes according variables should be made in
 // settings
 
-@forward "./010-settings/"; // many values will be overwritten by skin-xy file
+@forward "./010-settings"; // many values will be overwritten by skin-xy file
 
 // ## Dependencies
-@forward "./020-dependencies/";
+@forward "./020-dependencies";
 
 // ## Tools
 // include patterns and tools with @use in component when needed
 
 // ## Normalize
-@use "./040-normalize/" as *;
+@use "./040-normalize" as *;
 
 // ## Layout
-@use "./050-layout/" as *;
+@use "./050-layout" as *;
 // include layout variables with @use in component when needed
 
 // ## Elements
 @use "./060-elements" as *;
 
 // ## Components
-@use "./070-components" as *;
+@forward "./070-components";
 
 // ## Hacks
 @use "./080-hacks" as *;
@@ -32,12 +32,10 @@
 // CSS paths (linked fonts) are relative to the compiled template CSS
 
 // ###_cate-skin-patches
-
 // ### SELECTORS
 //
 // mainbar-trigger hover-state
-
-@use "./010-settings" as base;
+/*@use "./010-settings" as base;
 .il-mainbar-triggers {
     .btn-bulky,
     .il-link.link-bulky {
@@ -46,16 +44,16 @@
             background: base.$il-highlight-bg;
         }
     }
-}
+}*/
 
 // ### NO DISPLAY
 //
 .il-mainbar-triggers .bulky-label, // mainbar icon labels
 .il-maincontrols-slate-content .icon, // slate icons
-#headerimage // page header icons
+#headerimage, // page header icons
+.jstree-anchor img, // slate jstree
 {
     display: none !important;
 }
-
 
 

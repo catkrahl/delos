@@ -46,8 +46,10 @@ grid-based layout
 		grid-template-columns: auto 1fr;
 
 		.il-maincontrols-mainbar {
-			width: $il-standard-page-slate-width + $il-mainbar-width;
-			transition: width 500ms;
+			// width: $il-standard-page-slate-width + $il-mainbar-width;
+			grid-template-columns: $il-mainbar-btn-width $il-standard-page-slate-width;
+			width: $il-mainbar-btn-width + $il-standard-page-slate-width;
+			transition: 350ms ease-out;
 
 			// slate
 			.il-mainbar-slates {
@@ -138,7 +140,7 @@ div.il-system-infos {
 	color: $il-standard-page-header-page-title-color;
 }
 
-.il-header-locator{
+.il-header-locator {
 	display: none;
 }
 // mainbar
@@ -152,9 +154,9 @@ nav.il-maincontrols {
 .il-maincontrols-mainbar {
 	display: grid;
 	height: 100%;
-	grid-template-columns: $il-mainbar-btn-width $il-standard-page-slate-width;
+	grid-template-columns: $il-mainbar-btn-width 0;
 	grid-template-rows: 1fr;
-	transition: 500ms;
+	transition: 350ms ease-out;
 	width: $il-mainbar-width;
 	&.engaged {
 

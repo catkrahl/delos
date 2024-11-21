@@ -4,11 +4,11 @@ $il-mainbar-btn-color: s.$il-main-bg !default;
 $il-mainbar-btn-bg-color: s.$il-neutral-color !default;
 
 $il-mainbar-btn-color-hover: s.$il-neutral-color !default;
-$il-mainbar-btn-bg-color-hover: s.$il-main-bg !default;
+$il-mainbar-btn-bg-color-hover: s.$il-highlight-bg !default; //###_cate-skin-patch
 
 $il-mainbar-btn-color-engaged: s.$il-neutral-color !default;
-$il-mainbar-btn-bg-color-engaged: s.$il-main-bg !default;
+$il-mainbar-btn-bg-color-engaged: s.$il-highlight-bg !default; //###_cate-skin-patch
 
-$il-mainbar-btn-icon-filter: brightness(0) invert(1) !default;
+$il-mainbar-btn-icon-filter: brightness(0) invert(0) opacity(0.5) !default;
 $il-mainbar-btn-hover-icon-filter: invert(50%) !default;
 $il-mainbar-btn-engaged-icon-filter: invert(50%) !default;

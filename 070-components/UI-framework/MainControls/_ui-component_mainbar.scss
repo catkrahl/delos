@@ -12,7 +12,7 @@ $il-mainbar-btn-padding: 0;
 $il-mainbar-btn-label-icon-gap: $il-padding-xs-vertical;
 
 $il-mainbar-btn-border-radius: $il-border-radius-base !default; // ###_cate-skin-patch
-$il-mainbar-btn-border: 0px solid $il-standard-page-border-light-color; // ###_cate-skin-patch
+$il-mainbar-btn-border: none; // ###_cate-skin-patch
 $il-mainbar-btn-label-size: $il-font-size-xsmall;
 $il-mainbar-trigger-icon-size: 32px; // ###_cate-skin-patch
 $il-mainbar-remove-tools-btn-height: 45px;
@@ -30,7 +30,7 @@ $il-mainbar-tools-tab-btn-bg-disengaged: $il-main-color;
 
 // SLATES VARIABLES
 
-$il-mainbar-slates-bg-color: $il-main-bg;
+$il-mainbar-slates-bg-color: lighten($il-main-color, 58%) !default; //###_cate-skin-patch
 $il-maincontrols-mainbar-bg-color: $il-mainbar-btn-bg-color;
 
 // bulky colors are in button settings

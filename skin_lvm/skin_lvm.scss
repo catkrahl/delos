@@ -15,10 +15,10 @@ $customer-colors: (
         "customer-bg-primary": #ffffff,
         "customer-bg-secondary": #f9f9f9,
         "customer-bg-dark": #efefef,
-        "customer-hightlight-bg": #00ff00,
+        "customer-hightlight-bg": #d9f0e0,
 );
 
-@use "../010-settings/" as * with (
+@use "../010-settings" as * with (
     // color setup
     $il-main-color: map-get($customer-colors, "customer-color-1"),
     $il-headings-color: map-get($customer-colors, "customer-color-1"),
@@ -27,7 +27,11 @@ $customer-colors: (
     $il-main-darker-bg: map-get($customer-colors, "customer-bg-dark"),
     $il-standard-page-header-bg-color: map-get($customer-colors, "customer-bg-primary"),
     $il-mainbar-btn-bg-color: map-get($customer-colors, "customer-bg-primary"), //controls the mainbar-bg
-    $il-highlight-bg: map-get($customer-colors, "customer-hightlight-bg")
+    $il-highlight-bg: map-get($customer-colors, "customer-hightlight-bg"),
+);
+
+@use "../070-components" as * with (
+     $il-mainbar-slates-bg-color: #f5fbf7,
 );
 
 /*

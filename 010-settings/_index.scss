@@ -16,28 +16,3 @@
 @forward "./settings_mainbar";
 @forward "./settings_media";
 @forward "./settings_shadows";
-
-// ###_cate-skin-patch
-//
-
-// ###_typo
-
-$il-web-font-path: "../fonts/" !default;
-$il-font-family-sans-serif: 'Nunito', Verdana, Arial, Helvetica, sans-serif !default;
-$il-headings-font-family: $il-font-family-sans-serif !default;
-$il-font-weight-light:    200 !default;
-$il-font-weight-base:    300 !default;
-$il-font-weight-bold:    200 !default;
-$il-font-weight-xbold:    700 !default;
-$il-headings-font-weight: 200 !default;
-
-// ### header
-$il-standard-page-header-height: 80px !default;
-/*
-// ### mainbar
-
-$il-main-color: #00FF00 !default;
-$il-highlight-bg: lighten($il-main-color, 50%) !default;
-$il-mainbar-btn-bg-color-engaged: $il-highlight-bg !default;// lighten($il-main-color, 50%);
-*/
-$il-mainbar-btn-icon-filter: brightness(0) invert(0) opacity(.5);

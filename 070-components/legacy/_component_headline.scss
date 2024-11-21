@@ -8,7 +8,7 @@ h1.il-page-content-header {
 	// ###_end-patch
 	vertical-align: middle;
 	font-size: $il-font-size-h1;
-	font-weight: $il-font-weight-bold;
+	font-weight: $il-headings-font-weight; //###_core-fix
 	@media only screen and (max-width: $il-grid-float-breakpoint-max) {
         font-size: $il-font-size-xxlarge;
     }
@@ -27,7 +27,7 @@ h1.ilHeader {
 }
 
 h2.ilHeader {
-	font-weight: $il-font-weight-bold;
+	font-weight: $il-headings-font-weight; //###_core-fix
 	padding: 0;
 	margin: 0;
 	display: inline;
