@@ -5,8 +5,8 @@
 //##
 
 //** if left unchanged, you have to copy delos fonts folder to your skin folder. To use the delos fonts in your skin, please change this value (in custom less data or variables.scss of your custom skin) to "../../../../templates/default/fonts/"
-$il-web-font-path: "./fonts/" !default;
-$il-font-family-sans-serif: 'Open Sans', Verdana, Arial, Helvetica, sans-serif !default;
+$il-web-font-path: "../fonts/" !default;
+$il-font-family-sans-serif: 'Nunito', Verdana, Arial, Helvetica, sans-serif !default;
 
 $il-headings-font-family: $il-font-family-sans-serif !default;
 
@@ -35,15 +35,15 @@ $il-line-height-small: 1.5 !default;
 
 
 //** Used to lighten text, e.g. workflow steps.
-$il-font-weight-light:    300 !default;
+$il-font-weight-light:    200 !default;
 //** Default font weight.
-$il-font-weight-base:    400 !default;
+$il-font-weight-base:    300 !default;
 //** Used to indicate headings.
-$il-font-weight-bold:    600 !default;
+$il-font-weight-bold:    500 !default;
 //** Used to indicate e.g. dates with appointements
 $il-font-weight-xbold:    700 !default;
 
-$il-headings-font-weight: 500 !default;
+$il-headings-font-weight: 200 !default;
 
 $il-link-decoration: none !default;
 $il-link-hover-decoration: underline !default;

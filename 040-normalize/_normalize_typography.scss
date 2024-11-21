@@ -66,3 +66,13 @@
 	font-weight: 300;
 	font-style: normal;
 }
+
+//###_cate-skin-patch
+// cat iconfont integration
+@font-face {
+	font-family: 'cat icons';
+	font-style: normal;
+	font-weight: 400;
+	src: url('#{$il-web-font-path}cate/cat-icons.woff') format('woff'),
+		 url('#{$il-web-font-path}cate/cat-icons.ttf') format('truetype');
+}

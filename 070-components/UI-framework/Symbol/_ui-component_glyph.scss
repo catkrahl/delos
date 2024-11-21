@@ -1,4 +1,4 @@
-@use "../../../010-settings/" as *;
+@use "../../../010-settings" as *;
 @use "../../../050-layout/basics" as *;
 
 $il-glyph-color: $il-link-color;
@@ -493,3 +493,50 @@ $icon-font-svg-id:        "glyphicons_halflingsregular" !default;
 	font-family: il-icons;
 	content: "\e001";
 }
+
+
+/*
+//###_cate-skin-patch
+// overwrites from 8.x
+*/
+
+/*
+========================================================
+bootstrap glyphicon overwrites
+========================================================
+*/
+
+// reduced icon size in tables
+.il-layout-page-content table .glyphicon:before {
+    font-size: .8rem;
+}
+
+// sortation arrow in tables
+.glyphicon-arrow-down:before {
+    content: "\e259";
+}
+
+.glyphicon-arrow-up:before {
+    content: "\e260";
+    position: relative;
+    top: 2px;
+}
+
+// replaces bootstrap chevron icon
+.glyphicon-chevron-left:before,
+.glyphicon-chevron-right:before {
+    color: $il-link-color; // cate: gray-060
+    font-family: "cat icons";
+    font-size: 1rem;
+    font-weight: 900;
+    opacity: 1;
+}
+
+.glyphicon-chevron-left:before {
+    content: "\e90a";
+}
+
+.glyphicon-chevron-right:before {
+    content: "\e90b";
+}
+
