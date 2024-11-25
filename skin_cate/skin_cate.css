@@ -18774,20 +18774,11 @@ div.Access {
   color: rgb(111.25, 111.25, 111.25);
 }
 
-/*@use "./010-settings" as base;
-.il-mainbar-triggers {
-    .btn-bulky,
-    .il-link.link-bulky {
-        &.engaged,
-        &:hover {
-            background: base.$il-highlight-bg;
-        }
-    }
-}*/
 .il-mainbar-triggers .bulky-label,
 .il-maincontrols-slate-content .icon,
 #headerimage,
-.jstree-anchor img {
+.jstree-anchor img,
+.dropdown-menu img {
   display: none !important;
 }
 

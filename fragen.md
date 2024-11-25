@@ -44,9 +44,14 @@
 * Idee: Überschreibung am Ende der urspünglichen Datei unter Beibehaltung des Ausgangswerts von ilias
 
 ### ???
+* wo werden die parameter für die Farbe des dropdown-toggle-button übergeben? -> änderungen zu machen ist schwer bzw. nicht verständlich
+* kann ich z.B. eine globale Variable für den border-radius setzen, der auch bei anderen Elementen im Skin sich entsprechend auswirkt? Mit der Parameter-Übergabe am make-button-mixin wirkt sich das ja nicht gleichzeitig für andere Elemente aus, wenn man das möchte
 * ui_component_mainbar -> mixin in datei oder in mixins?
 * 3 Stellen für typo: settings_typography/normalize_typography/elements_typography
 * tabs hover bg-color in _c-toolbar, nicht in _c-tabs
+
+### improvments
+* mixin 030_tools/_tool_border-radius ist repetetive, top,right,bottom, left sollte ein parameter werden!
 
 ### citations:
 "And, if we need, we can always @use and @forward the same module by adding both rules:

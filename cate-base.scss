@@ -31,29 +31,5 @@
 // SCSS paths are relativ to the SCSS file
 // CSS paths (linked fonts) are relative to the compiled template CSS
 
-// ###_cate-skin-patches
-// ### SELECTORS
-//
-// mainbar-trigger hover-state
-/*@use "./010-settings" as base;
-.il-mainbar-triggers {
-    .btn-bulky,
-    .il-link.link-bulky {
-        &.engaged,
-        &:hover {
-            background: base.$il-highlight-bg;
-        }
-    }
-}*/
-
-// ### NO DISPLAY
-//
-.il-mainbar-triggers .bulky-label, // mainbar icon labels
-.il-maincontrols-slate-content .icon, // slate icons
-#headerimage, // page header icons
-.jstree-anchor img, // slate jstree
-{
-    display: none !important;
-}
 
 

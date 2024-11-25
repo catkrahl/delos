@@ -323,43 +323,14 @@ body {
 
     // fix for higher specificity
     //
-    //#en#.ilc_section_ExpandButtonWidth .ilc_Paragraph.ilc_text_block_Standard,
     .ilc_section_KnopfVolleBreite .ilc_Paragraph.ilc_text_block_Standard {
-        /*
-        //#en#span.ilc_text_inline_ContentButton,
-        span.ilc_text_inline_KnopfKlein,
-        span.ilc_text_inline_KnopfGross,
-            //#en#span.ilc_text_inline_ContentButtonSecondarySmall,
-            //#en#span.ilc_text_inline_ContentButtonSecondaryBig,
-        span.ilc_text_inline_KnopfSekundaerfarbeKlein,
-        span.ilc_text_inline_KnopfSekundaerfarbeGross,
-            //#en#span.ilc_text_inline_ContentButtonDefaultSmall,
-            //#en#span.ilc_text_inline_ContentButtonDefaultBig,
-        span.ilc_text_inline_KnopfStandardKlein,
-        span.ilc_text_inline_KnopfStandardGross
-        */
+
         [class*="Knopf"],
         [class*="KnopfStandard"],
         [class*="KnopfSekundaerfarbe"] {
             display: block;
         }
     }
-
-    // moved to the end so it comes later than the mixins
-
-    //#en#span.ilc_text_inline_ContentButton,
-    /*
-    span.ilc_text_inline_KnopfKlein,
-    span.ilc_text_inline_KnopfGross,
-        //#en#span.ilc_text_inline_ContentButtonSecondarySmall,
-        //#en#span.ilc_text_inline_ContentButtonSecondaryBig,
-    span.ilc_text_inline_KnopfSekundaerfarbeKlein,
-    span.ilc_text_inline_KnopfSekundaerfarbeGross,
-        //#en#span.ilc_text_inline_ContentButtonDefaultSmall,
-        //#en#span.ilc_text_inline_ContentButtonDefaultBig,
-    span.ilc_text_inline_KnopfStandardKlein,
-    span.ilc_text_inline_KnopfStandardGross
-    */
     span[class*="Knopf"],
     span[class*="KnopfStandard"],
     span[class*="KnopfSekundaerfarbe"] {
@@ -373,23 +344,6 @@ body {
             text-decoration: none;
         }
     }
-
-    /* Old blocks
-
-    div.ilc_text_block_List {
-        margin: 3px 0;
-    }
-
-    // Block
-    div.ilc_section_Block,
-    a.ilc_section_Block {
-        background-color: @global-bg-color;
-        border: @border;
-        margin: 10px 0;
-        padding: 5px 10px;
-    }
-
-    */
 
     .ilc_section_PlayIcon,
     .ilc_section_InfoIcon {
@@ -430,161 +384,7 @@ body {
     }
 }
 
-// accordeon
-body {
-    .ilc_va_cntr_VAccordCntr {
-        margin: @spacing-small 0;
-    }
 
-    .ilc_va_icntr_VAccordICntr {
-        background-color: transparent;
-        border: none;
-        margin-bottom: 0;
-    }
-
-    .ilc_va_ihead_VAccordIHead {
-        background-color: transparent;
-        background-image: none;
-        color: @text-color;
-        cursor: pointer;
-        font-size: 1.1rem;
-        font-weight: @font-weight-text-selected;
-        line-height: 1.5;
-        min-height: auto;
-        padding: 10px;
-        text-transform: none;
-        transition: .3s all;
-
-        &:hover {
-            color: @cat-accordion-head-text-color-hover;
-            background-color: @cat-accordion-head-color-hover;
-            .ilc_va_ihead_VAccordIHeadCap:before {
-                color: @cat-accordion-head-text-color-hover;
-            }
-        }
-
-        .ilc_va_ihead_VAccordIHeadCap,
-        .ilc_va_ihcap_VAccordIHeadCap {
-            position: relative; // so before element can be positioned absolute
-            width: 100%; // in case icon sits at right
-            display: flex;
-            &:before {
-                background-image: none;
-                content: "\e604";
-                color: @text-color-headline;
-                display: inline-block;
-                font-family: "il-icons"; // same as slate
-                font-size: 0.9rem;
-                font-weight: 600;
-                margin-right: @spacing-small * 1.375; // keeps distance when icon left, corrected value for same indent as paragraph
-                padding-top: 0.14rem;
-            }
-        }
-    }
-
-    .ilc_va_iheada_VAccordIHeadActive {
-        // background-color: @global-bg-color;
-        color: @base-color-1;
-        .ilc_va_ihead_VAccordIHeadCap {
-            &:before {
-                content: "\e607";
-            }
-        }
-    }
-
-    .ilc_va_icont_VAccordICont {
-        padding: 5px 0px 5px 40px;
-        background-color: transparent;
-    }
-}
-
-// alternative accordeon styles
-//
-//#en#.ilc_section_AccordeonSingleOutlined,
-.ilc_section_AkkordeonEinzelnUmrandet {
-    .ilc_va_icntr_VAccordICntr {
-        .border();
-        .border-radius-small();
-        margin-bottom: @spacing-small;
-        overflow: visible;
-    }
-    .ilc_va_ihead_VAccordIHead {
-        padding: @spacing-small @spacing-small @spacing-small @spacing-medium;
-    }
-    .ilc_va_icont_VAccordICont {
-        padding: 0 @spacing-small @spacing-medium @spacing-medium * 2.66;
-    }
-}
-
-//#en#.ilc_section_AccordeonOutlinedSegmented,
-.ilc_section_AkkordeonUmrandetSegmentiert {
-    .border();
-    .border-radius-small();
-    border-bottom-width: 0;
-    overflow: visible;
-    .ilc_va_cntr_VAccordCntr {
-        margin: 0;
-    }
-    .ilc_va_icntr_VAccordICntr {
-        border-bottom: @border;
-        &:last-of-type {
-            border-bottom: none;
-        }
-    }
-    .ilc_va_ihead_VAccordIHead {
-        padding: @spacing-small @spacing-small @spacing-small @spacing-medium;
-    }
-    .ilc_va_iheada_VAccordIHeadActive {
-        background-color: @gray-100;
-    }
-    .ilc_va_icont_VAccordICont {
-        padding: @spacing-small @spacing-small @spacing-medium @spacing-medium * 2.66;
-        background-color: @gray-100;
-    }
-}
-
-.ilc_section_AkkordeonPfeilRechts {
-    .ilc_va_ihead_VAccordIHead .ilc_va_ihead_VAccordIHeadCap {
-        justify-content: space-between;
-        &:before {
-            order: 2;
-            margin-right: 0;
-        }
-    }
-}
-
-body .ilc_section_AkkordeonButton,
-body *[class*="ilc_section_Karte"] .ilc_section_AkkordeonButton {
-    .ilc_va_cntr_VAccordCntr {
-        margin: 0;
-    }
-    .ilc_va_ihead_VAccordIHead,
-    .ilc_va_iheada_VAccordIHeadActive {
-        .btn();
-        .btn-default();
-        .input-padding-big();
-        display: block;
-        margin-bottom: @spacing-medium;
-        min-height: auto;
-        .ilc_va_ihead_VAccordIHeadCap,
-        .ilc_va_ihcap_VAccordIHeadCap {
-            display: block;
-            &::before {
-                display: none;
-            }
-        }
-    }
-    .ilc_va_ihead_VAccordIHead {
-        margin: 0;
-        &.ilc_va_iheada_VAccordIHeadActive {
-            margin-bottom: @spacing-small;
-        }
-    }
-    .ilc_va_icont_VAccordICont {
-        padding: 0;
-        background-color: transparent;
-    }
-}
 
 // carousel fix
 // because there is no max content width in il60 carousels go crazy. Should get fixed in Ilias standard!

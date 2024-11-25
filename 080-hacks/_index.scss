@@ -246,7 +246,7 @@ div.ilFrame {
 	}
 }
 
-// used to be in Services/certificates 
+// used to be in Services/certificates
 
 .il-deck {
 	.il-card {
@@ -391,3 +391,16 @@ div.Access {
 .light {
 	color: $il-text-light-color;
 }
+
+//###_cate-skin-patch
+// NON DISPLAY Elements
+//
+.il-mainbar-triggers .bulky-label, // mainbar icon labels
+.il-maincontrols-slate-content .icon, // slate icons
+#headerimage, // page header icons
+.jstree-anchor img, // slate jstree
+.dropdown-menu img, // add new item menu
+{
+	display: none !important;
+}
+//###_patch-end
