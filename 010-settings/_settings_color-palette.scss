@@ -40,7 +40,7 @@ $il-highlight-bg: lighten($il-main-color, 52%) !default; //###_cate-skin-patch
 //** Used to be $text-color. Can be used on all background colors.
 $il-text-color: #161616 !default;
 
-$il-headings-color: inherit !default;
+$il-headings-color: $il-main-color !default; //###_cate-skin-patch
 
 //** Used if text is hovered in components such a Dropdowns
 $il-text-hover-color: darken($il-text-color, 10%) !default;

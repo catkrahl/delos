@@ -1,9 +1,10 @@
 @use "../../010-settings" as *;
+@use "contentstyle_vars.scss" as *;
 
 
 // private accordion vars
-$cat-accordion-head-bg-color-hover:
-$cat-accordion-head-text-color-hover:
+$cat-accordion-head-bg-color-hover: $il-highlight-bg;
+$cat-accordion-head-text-color-hover: $il-text-color;
 
 // accordion styles
 //
@@ -21,11 +22,11 @@ body {
     .ilc_va_ihead_VAccordIHead {
         background-color: transparent;
         background-image: none;
-        color: $text-color;
+        color: $il-text-color;
         cursor: pointer;
-        font-size: 1.1rem;
-        font-weight: $font-weight-text-selected;
-        line-height: 1.5;
+        font-size: .9rem;
+        font-weight: $il-font-weight-bold;
+        line-height: 1.3;
         min-height: auto;
         padding: 10px;
         text-transform: none;
@@ -60,7 +61,7 @@ body {
 
     .ilc_va_iheada_VAccordIHeadActive {
         // background-color: $global-bg-color;
-        color: $base-color-1;
+        color: $il-headings-color;
         .ilc_va_ihead_VAccordIHeadCap {
             &:before {
                 content: "\e607";
@@ -69,18 +70,17 @@ body {
     }
 
     .ilc_va_icont_VAccordICont {
-        padding: 5px 0px 5px 40px;
+        padding: 5px 0 5px 40px;
         background-color: transparent;
     }
 }
 
-// alternative accordeon styles
+// alternative accordion styles
 //
-//#en#.ilc_section_AccordeonSingleOutlined,
 .ilc_section_AkkordeonEinzelnUmrandet {
     .ilc_va_icntr_VAccordICntr {
-        .border();
-        .border-radius-small();
+        border-radius: $il-border-radius-base;
+        border: $il-main-border;
         margin-bottom: $spacing-small;
         overflow: visible;
     }
@@ -94,15 +94,15 @@ body {
 
 //#en#.ilc_section_AccordeonOutlinedSegmented,
 .ilc_section_AkkordeonUmrandetSegmentiert {
-    .border();
-    .border-radius-small();
+    border-radius: $il-border-radius-base;
+    border: $il-main-border;;
     border-bottom-width: 0;
     overflow: visible;
     .ilc_va_cntr_VAccordCntr {
         margin: 0;
     }
     .ilc_va_icntr_VAccordICntr {
-        border-bottom: $border;
+        border-bottom: $il-main-border;
         &:last-of-type {
             border-bottom: none;
         }
@@ -111,11 +111,11 @@ body {
         padding: $spacing-small $spacing-small $spacing-small $spacing-medium;
     }
     .ilc_va_iheada_VAccordIHeadActive {
-        background-color: $gray-100;
+        background-color: $il-main-darker-bg;
     }
     .ilc_va_icont_VAccordICont {
         padding: $spacing-small $spacing-small $spacing-medium $spacing-medium * 2.66;
-        background-color: $gray-100;
+        background-color: $il-main-darker-bg;
     }
 }
 
@@ -128,6 +128,7 @@ body {
         }
     }
 }
+/*
 
 body .ilc_section_AkkordeonButton,
 body *[class*="ilc_section_Karte"] .ilc_section_AkkordeonButton {
@@ -161,3 +162,4 @@ body *[class*="ilc_section_Karte"] .ilc_section_AkkordeonButton {
         background-color: transparent;
     }
 }
+*/

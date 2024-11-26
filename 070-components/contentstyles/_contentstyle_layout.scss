@@ -1,15 +1,4 @@
-@use "../../010-settings" as *;
-@use "../../010-settings/legacy-settings/legacy-settings_symbol" as *;
-@use "../../050-layout/basics" as *;
-@use "../../050-layout/standardpage" as *;
-
-// CATE.LESS 3041-3105
-// variables should may be replaced by il9-variables?
-$spacing-xsmall: .3rem;
-$spacing-small: .8rem;
-$spacing-medium: 1.2rem; // one value should be equal to @font-size-base
-$spacing-large: 2.5rem;
-$spacing-xlarge: 4rem;
+@use "contentstyle_vars.scss" as *;
 
 // placeholders
 %LimitierteBreite {
@@ -17,6 +6,7 @@ $spacing-xlarge: 4rem;
     margin: 0 auto;
     margin-bottom: $spacing-small !important; // needs important so it has a margin even if it's a last child
 }
+
 body {
     .ilc_section_LimitierteBreite,
     .ilc_section_LimitierteBreiteLinks {
