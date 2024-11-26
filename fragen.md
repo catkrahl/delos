@@ -63,11 +63,11 @@ That’s particularly useful if you want to wrap a library with configuration or
 ### GIT SUBTREE 
 
 #### add:
-git subtree add --prefix Customizing/global/skin/cate git@github.com:conceptsandtraining/delos.git master --squash
+git subtree add --prefix Customizing/global/skin/cate git@github.com:conceptsandtraining/delos.git cate90 --squash
 * --squash-flag: will NOT store the history of the subtree-repo in th main repository (we SHOULD?)
 
 #### pull: 
-git subtree pull --prefix Customizing/global/skin/cate git@github.com:conceptsandtraining/delos.git master master --squash
+git subtree pull --prefix Customizing/global/skin/cate git@github.com:conceptsandtraining/delos.git cate90 master --squash
 
 #### push:
 git subtree push --prefix Customizing/global/skin/cate git@github.com:conceptsandtraining/delos.git cate90
