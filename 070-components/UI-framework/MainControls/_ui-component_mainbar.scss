@@ -24,7 +24,7 @@ $il-mainbar-tools-item-gap: 3px;
 $il-mainbar-tools-btn-bg: $il-warning-color;
 $il-mainbar-tools-bg: $il-main-dark-bg;
 
-$il-mainbar-tools-btn-bg-engaged: lighten($il-main-color, 50%);
+$il-mainbar-tools-btn-bg-engaged: $il-main-darker-bg; //###_cate-skin-patch
 $il-mainbar-tools-tab-btn-bg-engaged: white;
 $il-mainbar-tools-tab-btn-bg-disengaged: $il-main-color;
 
@@ -98,8 +98,8 @@ $il-slate-bulky-link-padding: $il-slate-bulky-padding-vertical $il-padding-base-
 		// reset li styles
 		min-width: 100%;
 		list-style: none;
-		padding: 0px;
-		margin: 0px;
+		padding: 0;
+		margin: 0;
 		li {
 			margin: $il-mainbar-btn-margin;
 		}
@@ -250,6 +250,12 @@ $il-slate-bulky-link-padding: $il-slate-bulky-padding-vertical $il-padding-base-
 		color: $il-mainbar-btn-color-engaged;
 		.icon  {
 			filter: invert(30%);
+			//###_cate-skin-patch
+			&.small {
+				width: $il-mainbar-trigger-icon-size;
+				height: $il-mainbar-trigger-icon-size;
+			}
+			//###_patch-end
 		}
 	}
 }
@@ -272,6 +278,12 @@ $il-slate-bulky-link-padding: $il-slate-bulky-padding-vertical $il-padding-base-
 			@media (prefers-contrast: more) {
 				filter: none;
 			}
+			//###_cate-skin-patch
+			&.small {
+				width: $il-mainbar-trigger-icon-size;
+				height: $il-mainbar-trigger-icon-size;
+			}
+			//###_patch-end
 		}
 		.bulky-label {
 			text-overflow: ellipsis;

@@ -41,6 +41,8 @@
 
 ### IMPROVEMENTS
 * mixin 030_tools/_tool_border-radius ist repetetive, top,right,bottom, left sollte ein parameter werden!
+* @import ersetzen in -ui-component_maincontrols
+* 0px überall entfernen!
 
 ### GIT SUBTREE 
 

@@ -3694,8 +3694,8 @@ footer {
 .il-mainbar-triggers .il-mainbar-entries {
   min-width: 100%;
   list-style: none;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 .il-mainbar-triggers .btn-bulky,
 .il-mainbar-triggers .il-link.link-bulky {
@@ -3887,11 +3887,15 @@ footer {
   }
 }
 .il-mainbar-tools-button .btn-bulky.engaged {
-  background-color: rgb(155, 255, 186.6129032258);
+  background-color: #efefef;
   color: #2c2c2c;
 }
 .il-mainbar-tools-button .btn-bulky.engaged .icon {
   filter: invert(30%);
+}
+.il-mainbar-tools-button .btn-bulky.engaged .icon.small {
+  width: 32px;
+  height: 32px;
 }
 
 .il-mainbar-tools-entries {
@@ -3916,6 +3920,11 @@ footer {
   .il-mainbar-tools-entries .il-link.link-bulky .icon {
     filter: none;
   }
+}
+.il-mainbar-tools-entries .btn-bulky .icon.small, .il-mainbar-tools-entries .btn-bulky .icon.small,
+.il-mainbar-tools-entries .il-link.link-bulky .icon.small {
+  width: 32px;
+  height: 32px;
 }
 .il-mainbar-tools-entries .btn-bulky .bulky-label, .il-mainbar-tools-entries .btn-bulky .bulky-label,
 .il-mainbar-tools-entries .il-link.link-bulky .bulky-label {
@@ -3944,7 +3953,7 @@ footer {
 }
 
 .il-mainbar-tools-entries-bg {
-  background-color: rgb(155, 255, 186.6129032258);
+  background-color: #efefef;
   display: flex;
   height: 80px;
   width: 100%;
@@ -18919,7 +18928,9 @@ div.Access {
 .il-maincontrols-slate-content .icon,
 #headerimage,
 .jstree-anchor img,
-.dropdown-menu img {
+.dropdown-menu img,
+.il-mainbar-tools-button .bulky-label,
+.il-mainbar-tools-entries .bulky-label {
   display: none !important;
 }
 
