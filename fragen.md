@@ -1,9 +1,9 @@
 # SASS cate90
 ## Guidelines
 
-### Patch Marker
+### PATCH MARKER
 * patches mit '//###_cate-skin-patch' markieren und mehrzeilig mit '//###_patch_end' beenden
-* patches für den ILIAS-Kern mit //###_core-fix markieren
+* patches für den ILIAS-Kern mit //###_skin-core-fix markieren
 
 ### Allgemein
 * Änderungen nicht direkt im Code der Module, sondern - falls möglich - in der modul/index.scss
@@ -16,10 +16,6 @@
 * Farben nicht mit einer map in der settings/index (re-)definieren, weil sie dann nicht mehr weiter exposed (cate.scss/customer.scss) werden können
 
 ### Beispiel: 
-#### Typo Nunito/font-weight 
-* Überschreibung in der skin-xyz.scss zu redundant
-* Änderungen müssten in allen skin-Dateien gemacht werden
-* Änderungen in 010-settings/index 
 
 #### mainbar bg color
 * $il-mainbar-btn-bg-color-engaged: $il-main-color;
@@ -36,29 +32,15 @@
 * Überschreibung am Ende der 070-components/index.scss
 * unproblematisch bei einem rebase
 
-#### ERROR2 (siehe 070-components)
-* These: Überschreibung von Variablenwerten nicht im Modul selbst, sondern am Ende jeder index.scss
-* Vorteil: leicht zu rebasen
-* Fehler: 070-components/index.scss -> wenn lokale Variablen globale Variablen enthalten, die an dieser Stellen nicht bekannt sind
-* $il-mainbar-btn-border: 0px solid $il-standard-page-border-light-color; ($il-standard-page-border-light-color)
-* Idee: Überschreibung am Ende der urspünglichen Datei unter Beibehaltung des Ausgangswerts von ilias
-
-### ???
+### QUESTIONS
 * wo werden die parameter für die Farbe des dropdown-toggle-button übergeben? -> änderungen zu machen ist schwer bzw. nicht verständlich
 * kann ich z.B. eine globale Variable für den border-radius setzen, der auch bei anderen Elementen im Skin sich entsprechend auswirkt? Mit der Parameter-Übergabe am make-button-mixin wirkt sich das ja nicht gleichzeitig für andere Elemente aus, wenn man das möchte
 * ui_component_mainbar -> mixin in datei oder in mixins?
 * 3 Stellen für typo: settings_typography/normalize_typography/elements_typography
 * tabs hover bg-color in _c-toolbar, nicht in _c-tabs
 
-### improvments
+### IMPROVEMENTS
 * mixin 030_tools/_tool_border-radius ist repetetive, top,right,bottom, left sollte ein parameter werden!
-
-### citations:
-"And, if we need, we can always @use and @forward the same module by adding both rules:
-@forward 'forms';
-@use 'forms';
-That’s particularly useful if you want to wrap a library with configuration or any additional tools, before passing it along to your other files."
-(https://css-tricks.com/introducing-sass-modules/)
 
 ### GIT SUBTREE 
 
