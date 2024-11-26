@@ -60,5 +60,14 @@
 That’s particularly useful if you want to wrap a library with configuration or any additional tools, before passing it along to your other files."
 (https://css-tricks.com/introducing-sass-modules/)
 
-git subtree push:
-git subtree push --prefix=Customizing/global/skin/cate git@github.com:conceptsandtraining/delos.git cate90
+### GIT SUBTREE 
+
+#### add:
+git subtree add --prefix Customizing/global/skin/cate git@github.com:conceptsandtraining/delos.git master --squash
+* --squash-flag: will NOT store the history of the subtree-repo in th main repository (we SHOULD?)
+
+#### pull: 
+git subtree pull --prefix Customizing/global/skin/cate git@github.com:conceptsandtraining/delos.git master master --squash
+
+#### push:
+git subtree push --prefix Customizing/global/skin/cate git@github.com:conceptsandtraining/delos.git cate90
