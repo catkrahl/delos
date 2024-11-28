@@ -56,17 +56,20 @@ input.btn {
 }
 
 .btn-default {
-  @include make-button($set-basics: false, $set-design: true, 
+  @include make-button($set-basics: false, $set-design: true,
     $button-color: s.$il-btn-standard-bg,
 
     $bg-color: s.$il-btn-standard-bg,
     $text-color: s.$il-btn-standard-color,
     $border-color: s.$il-btn-standard-border,
 
+    $hover_bg-color: s.$il-highlight-bg, //###_cate-skin-patch
+    $hover_border-color: s.$il-btn-standard-border, //###_cate-skin-patch
+
     $disabled_bg-color: s.$il-disabled-btn-bg,
     $disabled_text-color: s.$il-disabled-btn-color,
     $disabled_border-color: s.$il-disabled-btn-border,
-    
+
     $engaged_bg-color: s.$il-engaged-btn-bg,
     $engaged_text-color: s.$il-engaged-btn-color,
     $engaged_border-color: s.$il-btn-standard-border,
@@ -89,7 +92,7 @@ input.btn {
     $disabled_bg-color: s.$il-disabled-btn-bg,
     $disabled_text-color: s.$il-disabled-btn-color,
     $disabled_border-color: s.$il-disabled-btn-border,
-    
+
     $engaged_bg-color: s.$il-engaged-btn-bg,
     $engaged_text-color: s.$il-engaged-btn-color,
     $engaged_border-color: s.$il-btn-primary-border,
@@ -119,7 +122,7 @@ input.btn {
     @extend .btn-ctrl;
     margin-left: l.$il-margin-xs-horizontal;
   }
-} 
+}
 
 // ILIAS doesn't use btn-success, btn-info, btn-warning, btn-danger
 
@@ -196,7 +199,7 @@ input.btn {
     $disabled_bg-color: s.$il-disabled-btn-bg,
     $disabled_text-color: s.$il-disabled-btn-color,
     $disabled_border-color: s.$il-disabled-btn-border,
-    
+
     $active_transform: null,
 
     $engaged_text-color: inherit,

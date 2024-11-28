@@ -11,18 +11,18 @@ $il-button-font-size: s-typo.$il-font-size-small !default;
 $il-button-font-weight: s-typo.$il-font-weight-base !default;
 
 //** Text color of the standard button (most button instances)
-$il-btn-standard-color: white !default;
+$il-btn-standard-color: s-color.$il-text-color !default; //###_cate-skin-patch
 //** Background color of the standard button (most button instances)
-$il-btn-standard-bg: s-color.$il-main-color !default;
+$il-btn-standard-bg: white !default; //###_cate-skin-patch
 //** Border color of the standard button (most button instances)
-$il-btn-standard-border: s-color.$il-main-color !default;
+$il-btn-standard-border: #999999 !default; //###_cate-skin-patch
 
 //** Text color of the primary button (most important button on the screen)
 $il-btn-primary-color: white !default;
 //** Background color of the primary button (most important button on the screen)
-$il-btn-primary-bg: darken(s-color.$il-secondary-color, 10%) !default;
+$il-btn-primary-bg: s-color.$il-main-color !default; //###_cate-skin-patch
 //** Border color of the primary button (most important button on the screen)
-$il-btn-primary-border: darken(s-color.$il-secondary-color, 10%) !default;
+$il-btn-primary-border: s-color.$il-main-color !default; //###_cate-skin-patch
 
 //** Colors of engaged buttons
 $il-engaged-btn-color: s-color.$il-text-color !default;
