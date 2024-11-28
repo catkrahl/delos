@@ -40,19 +40,18 @@
 * tabs hover bg-color in _c-toolbar, nicht in _c-tabs
 
 ### IMPROVEMENTS
-* mixin 030_tools/_tool_border-radius ist repetitiv, top,right,bottom, left sollte ein parameter werden!
+* mixin 030_tools/_tool_border-radius ist repetetive, top,right,bottom, left sollte ein parameter werden!
 * @import ersetzen in -ui-component_maincontrols
 * 0px überall entfernen!
-* benennung module NUR singl. oder plural
 
 ### GIT SUBTREE 
 
 #### add:
-git subtree add --prefix Customizing/global/skin/cate git@github.com:conceptsandtraining/delos.git cate90 --squash
+git subtree add --prefix Customizing/global/skin/cate git@github.com:catkrahl/delos.git cate90 --squash
 * --squash-flag: will NOT store the history of the subtree-repo in th main repository (we SHOULD?)
 
 #### pull: 
-git subtree pull --prefix Customizing/global/skin/cate git@github.com:conceptsandtraining/delos.git cate90 master --squash
+git subtree pull --prefix Customizing/global/skin/cate git@github.com:catkrahl/delos.git cate90 master --squash
 
 #### push:
-git subtree push --prefix Customizing/global/skin/cate git@github.com:conceptsandtraining/delos.git cate90
+git subtree push --prefix Customizing/global/skin/cate git@github.com:catkrahl/delos.git cate90
